@@ -24,3 +24,4 @@ add_lunch_combo aokp_vivow-userdebug
 add_lunch_combo aokp_wingray-userdebug
 add_lunch_combo aokp_p999-userdebug
 add_lunch_combo aokp_p990-userdebug
+add_lunch_combo aokp_olympus-userdebug

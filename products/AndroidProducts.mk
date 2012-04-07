@@ -23,4 +23,5 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/p999.mk \
     $(LOCAL_DIR)/p990.mk \
     $(LOCAL_DIR)/a500.mk \
-    $(LOCAL_DIR)/pyramid.mk
+    $(LOCAL_DIR)/pyramid.mk \
+    $(LOCAL_DIR)/olympus.mk
