@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string-array name="available_toggles_entries">
+		<item>ROTATE</item>
+		<item>BT</item>
+		<item>GPS</item>
+		<item>WIFI</item>
+		<item>AIRPLANE_MODE</item>
+		<item>VIBRATE</item>
+		<item>SILENT</item>
+		<item>SYNC</item>
+		<item>DATA</item>
+		<item>2G</item>
+		<item>AP</item>
+		<item>TORCH</item>
+        <item>SWAGGER</item>
+        <item>FCHARGE</item>
+	</string-array>
+	
+	<string-array name="available_toggles_values">
+		<item>Automatisch drehen</item>
+		<item>Bluetooth</item>
+		<item>GPS</item>
+		<item>WLAN</item>
+		<item>Flugmodus</item>
+		<item>Vibrieren</item>
+		<item>Lautlos</item>		
+		<item>Synchronisation</item>
+		<item>Daten</item>
+		<item>2G</item>
+		<item>Tethering (AP)</item>
+		<item>Taschenlampe</item>
+        <item>Swagger</item>
+        <item>Fast charge</item>
+	</string-array>
+
+</resources>
