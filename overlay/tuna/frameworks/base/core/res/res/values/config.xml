@@ -21,4 +21,5 @@
      for different hardware and product builds. -->
 <resources>
     <bool name="config_bluetooth_adapter_quick_switch">true</bool>
+    <bool name="config_has_full_color_notification_led">true</bool>
 </resources>
