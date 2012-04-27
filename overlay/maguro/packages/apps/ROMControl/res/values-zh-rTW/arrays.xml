@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="available_toggles_values">
+        <item>自動轉向</item>
+        <item>藍芽</item>
+        <item>GPS</item>
+        <item>Wi-Fi</item>
+        <item>飛航模式</item>
+        <item>震動</item>
+        <item>靜音</item>
+        <item>同步</item>
+        <item>行動網路</item>
+        <item>2G</item>
+        <item>Wi-Fi 網路分享</item>
+        <item>手電筒</item>
+        <item>Swagger</item>
+        <item>快速充電</item>
+    </string-array>
+</resources>
