@@ -27,3 +27,4 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/vivow.mk \
     $(LOCAL_DIR)/wingray.mk \
     $(LOCAL_DIR)/bravo.mk \
+    $(LOCAL_DIR)/ville.mk \
