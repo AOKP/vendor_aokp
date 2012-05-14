@@ -9,6 +9,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/espressowifi.mk \
     $(LOCAL_DIR)/fascinatemtd.mk \
     $(LOCAL_DIR)/galaxysmtd.mk \
+    $(LOCAL_DIR)/hercules.mk \
     $(LOCAL_DIR)/inc.mk \
     $(LOCAL_DIR)/otter.mk \
     $(LOCAL_DIR)/p1c.mk \
