@@ -1,3 +1,5 @@
+$(call inherit-product, frameworks/base/build/phone-hdpi-512-dalvik-heap.mk)
+
 $(call inherit-product, device/samsung/fascinatemtd/full_fascinatemtd.mk)
 
 # Release name
