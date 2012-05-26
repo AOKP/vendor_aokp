@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string-array name="available_toggles_entries">
+		<item>ROTATE</item>
+		<item>BT</item>
+		<item>GPS</item>
+		<item>WIFI</item>
+		<item>AIRPLANE_MODE</item>
+		<item>VIBRATE</item>
+		<item>SILENT</item>
+		<item>SYNC</item>
+        <item>SWAGGER</item>
+	</string-array>
+	
+	<string-array name="available_toggles_values">
+		<item>屏幕自动旋转</item>
+		<item>蓝牙</item>
+		<item>GPS 定位</item>
+		<item>Wi-Fi 无线网络</item>
+		<item>飞行模式</item>
+		<item>振动模式</item>
+		<item>静音模式</item>
+		<item>账户同步</item>
+        <item>手机自爆</item>
+	</string-array>
+
+</resources>
