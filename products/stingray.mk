@@ -1,6 +1,7 @@
 $(call inherit-product, device/moto/stingray/full_stingray.mk)
 
 $(call inherit-product, vendor/aokp/configs/common_tablet.mk)
+$(call inherit-product, vendor/aokp/configs/gsm.mk)
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/stingray
 
