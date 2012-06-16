@@ -5,7 +5,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
 include vendor/aokp/configs/themes_common.mk
 
 PRODUCT_PACKAGES += \
-    MusicFX \
     MusicVisualization \
     NoiseField \
     ROMControl \
@@ -61,7 +60,13 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/etc/cron/cron.hourly/01clear_cache:system/etc/cron/cron.hourly/01clear_cache \
     vendor/aokp/prebuilt/common/etc/cron/cron.daily/01clear_cache:system/etc/cron/cron.daily/01clear_cache \
     vendor/aokp/prebuilt/common/etc/cron/cron.weekly/01clear_cache:system/etc/cron/cron.weekly/01clear_cache 
-    
+
+# CM apps - Thanks to CyanogenMod we have these awesome apps :)
+PRODUCT_PACKAGES += \
+    Apollo \
+    DSPManager \
+    libcyanogen-dsp \
+    audio_effects.conf
 # Adding files needed for extra camera features
 PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/media/LMprec_508.emd:system/media/LMprec_508.emd \
