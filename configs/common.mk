@@ -8,7 +8,6 @@ PRODUCT_PACKAGES += \
     MusicFX \
     MusicVisualization \
     NoiseField \
-    ROMControl \
     PhaseBeam \
     su \
     AppWidgetPicker \
@@ -33,10 +32,11 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so
 
 # APK's common to all devices
-BUILD_PREBUILT += \
+#BUILD_PREBUILT += \
+PRODUCT_COPY_FILES +=  \
     vendor/aokp/prebuilt/common/app/Superuser.apk:system/app/Superuser.apk \
     vendor/aokp/prebuilt/common/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
-    vendor/aokp/prebuilt/common/app/Microbes.apk:system/app/Microbes.apk \    
+    vendor/aokp/prebuilt/common/app/Microbes.apk:system/app/Microbes.apk \
     vendor/aokp/prebuilt/common/app/UnicornPorn.apk:system/app/UnicornPorn.apk
 
 # init.d
