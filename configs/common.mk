@@ -27,18 +27,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     windowsmgr.max_events_per_sec=240 \
     ro.kernel.android.checkjni=0
 
-# Blobs common to all devices
-PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf  \
-    vendor/aokp/prebuilt/common/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so
-
-# APK's common to all devices
-BUILD_PREBUILT += \
-    vendor/aokp/prebuilt/common/app/Superuser.apk:system/app/Superuser.apk \
-    vendor/aokp/prebuilt/common/app/LatinImeDictionaryPack.apk:system/app/LatinImeDictionaryPack.apk \
-    vendor/aokp/prebuilt/common/app/Microbes.apk:system/app/Microbes.apk \    
-    vendor/aokp/prebuilt/common/app/UnicornPorn.apk:system/app/UnicornPorn.apk
-
 # init.d
 PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/etc/init.d/00check:system/etc/init.d/00check \
@@ -75,20 +63,6 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/media/video/Disco.480p.mp4:system/media/video/Disco.480p.mp4 \
     vendor/aokp/prebuilt/common/media/video/Sunset.240p.mp4:system/media/video/Sunset.240p.mp4 \
     vendor/aokp/prebuilt/common/media/video/Sunset.480p.mp4:system/media/video/Sunset.480p.mp4 
-
-# Enable SIP+VoIP on all targets
-PRODUCT_COPY_FILES += \
-    frameworks/base/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
-
-# Live wallpapers for all
-PRODUCT_PACKAGES += \
-		LiveWallpapers \
-		LiveWallpapersPicker \
-		MagicSmokeWallpapers \
-		VisualizationWallpapers \
-		librs_jni
-
-PRODUCT_COPY_FILES += packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
 # Inherit common build.prop overrides
 -include vendor/aokp/configs/common_versions.mk
