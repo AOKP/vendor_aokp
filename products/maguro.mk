@@ -16,3 +16,14 @@ PRODUCT_MANUFACTURER := samsung
 
 PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=takju BUILD_FINGERPRINT=google/takju/maguro:4.1.1/JRO03C/398337:user/release-keys PRIVATE_BUILD_DESC="takju-user 4.1.1 JRO03C 398337 release-keys" BUILD_NUMBER=398337
 
+PRODUCT_PACKAGES := \
+    bootanimation_720_1280 \
+    AndroidInSpace.240p \
+    AndroidInSpace.480p \
+    Disco.240p \
+    Disco.480p \
+    Sunset240p \
+    Sunset480p \
+    LMprec_508 \
+    PFFprec_600
+

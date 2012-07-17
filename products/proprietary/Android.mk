@@ -1,0 +1,95 @@
+# THIS IS JUST AN EXAMPLE FOR NOW.
+# Sadly, theres no way to rename a file (such as bootanimation_720_1280.zip) to bootanimation.zip upon copy....at least yet.
+
+LOCAL_PATH := $(call my-dir)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := bootanimation_720_1280
+LOCAL_MODULE_OWNER := aokp
+LOCAL_SRC_FILES := bootanimation_720_1280.zip
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .zip
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT)/media/
+LOCAL_MODULE_NAME := bootanimation.zip
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := AndroidInSpace.240p
+LOCAL_MODULE_OWNER := aokp
+LOCAL_SRC_FILES := AndroidInSpace.240p.mp4
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .mp4
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT)/media/video
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := AndroidInSpace.480p
+LOCAL_MODULE_OWNER := aokp
+LOCAL_SRC_FILES := AndroidInSpace.480p.mp4
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .mp4
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT)/media/video
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := Disco.240p
+LOCAL_MODULE_OWNER := aokp
+LOCAL_SRC_FILES := Disco.240p.mp4
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .mp4
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT)/media/video
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := Disco.480p
+LOCAL_MODULE_OWNER := aokp
+LOCAL_SRC_FILES := Disco.480p.mp4
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .mp4
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT)/media/video
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := LMprec_508
+LOCAL_MODULE_OWNER := aokp
+LOCAL_SRC_FILES := LMprec_508.emd
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .emd
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT)/media
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := PFFprec_600
+LOCAL_MODULE_OWNER := aokp
+LOCAL_SRC_FILES := PFFprec_600.emd
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .emd
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT)/media
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := Sunset240p
+LOCAL_MODULE_OWNER := aokp
+LOCAL_SRC_FILES := Sunset240p.mp4
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .mp4
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT)/media/video
+include $(BUILD_PREBUILT)
+
+include $(CLEAR_VARS)
+LOCAL_MODULE := Sunset480p
+LOCAL_MODULE_OWNER := aokp
+LOCAL_SRC_FILES := Sunset480p.mp4
+LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_SUFFIX := .mp4
+LOCAL_MODULE_CLASS := ETC
+LOCAL_MODULE_PATH := $(TARGET_OUT)/media/video
+include $(BUILD_PREBUILT)
