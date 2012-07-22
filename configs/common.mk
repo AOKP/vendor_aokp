@@ -14,13 +14,17 @@ PRODUCT_PACKAGES += \
     NoiseField \
     ROMControl \
     PhaseBeam \
-    su \
     AppWidgetPicker \
     openvpn \
     SwagPapers \
     AOKPtips \
     Superuser \
     UnicornPorn
+
+# SuperSU until its fixed when built
+PRODUCT_COPY_FILES += \
+    vendor/aokp/prebuilt/common/app/SuperSU.apk:system/app/SuperSU.apk \
+    vendor/aokp/prebuilt/common/xbin/su:system/xbin/su
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
