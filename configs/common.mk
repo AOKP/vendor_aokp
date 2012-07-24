@@ -20,7 +20,7 @@ PRODUCT_PACKAGES += \
     SwagPapers \
     AOKPtips \
     Superuser \
-    UnicornPorn
+    UnicornPorn 
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
@@ -74,6 +74,12 @@ PRODUCT_PACKAGES += \
     MagicSmokeWallpapers \
     VisualizationWallpapers \
     librs_jni
+
+PRODUCT_PACKAGES += \
+    openvpn \
+    e2fsck \
+    mke2fs \
+    tune2fs
 
 PRODUCT_COPY_FILES += packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
