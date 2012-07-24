@@ -20,7 +20,13 @@ PRODUCT_PACKAGES += \
     SwagPapers \
     AOKPtips \
     Superuser \
-    UnicornPorn
+    UnicornPorn \
+    openvpn \
+    e2fsck \
+    mke2fs \
+    tune2fs
+
+
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
