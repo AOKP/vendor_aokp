@@ -6,4 +6,5 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/stingray.mk \
     $(LOCAL_DIR)/toro.mk \
     $(LOCAL_DIR)/torospr.mk \
-    $(LOCAL_DIR)/wingray.mk
+    $(LOCAL_DIR)/wingray.mk \
+    $(LOCAL_DIR)/d2tmo.mk
