@@ -4,6 +4,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/d2tmo.mk \
     $(LOCAL_DIR)/grouper.mk \
     $(LOCAL_DIR)/maguro.mk \
+    $(LOCAL_DIR)/p1c.mk \
     $(LOCAL_DIR)/stingray.mk \
     $(LOCAL_DIR)/toro.mk \
     $(LOCAL_DIR)/torospr.mk \
