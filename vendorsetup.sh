@@ -4,6 +4,7 @@ add_lunch_combo aokp_d2tmo-userdebug
 add_lunch_combo aokp_grouper-userdebug
 add_lunch_combo aokp_maguro-userdebug
 add_lunch_combo aokp_stingray-userdebug
+add_lunch_combo aokp_tf101-userdebug
 add_lunch_combo aokp_toro-userdebug
 add_lunch_combo aokp_toroplus-userdebug
 add_lunch_combo aokp_wingray-userdebug
