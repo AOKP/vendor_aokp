@@ -9,8 +9,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.notification_sound=regulus.ogg \
     ro.config.alarm_alert=Alarm_Beep_03.ogg
 
-PRODUCT_PACKAGES += \
-    Trebuchet
+ PRODUCT_PACKAGES += \
+	NovaLauncher
+#   Trebuchet
 
 # Inherit drm blobs
 -include vendor/aokp/configs/common_drm_tablet.mk
