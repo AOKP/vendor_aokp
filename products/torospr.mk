@@ -4,6 +4,9 @@ $(call inherit-product, device/samsung/torospr/full_torospr.mk)
 # Inherit common product files.
 $(call inherit-product, vendor/aokp/configs/common_phone.mk)
 
+# Inherit DRM bits
+-include vendor/aokp/configs/common_drm_phone.mk
+
 # Setup device specific product configuration.
 PRODUCT_NAME := aokp_torospr
 PRODUCT_BRAND := Google

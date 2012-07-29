@@ -2,6 +2,9 @@ $(call inherit-product, device/moto/stingray/full_stingray.mk)
 
 $(call inherit-product, vendor/aokp/configs/common_tablet.mk)
 
+# Inherit DRM bits
+-include vendor/aokp/configs/common_drm_tablet.mk
+
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := aokp_stingray
 PRODUCT_BRAND := verizon
