@@ -7,6 +7,9 @@ $(call inherit-product, vendor/aokp/configs/common_phone.mk)
 # Inherit GSM common stuff
 $(call inherit-product, vendor/aokp/configs/gsm.mk)
 
+# Inherit DRM bits
+-include vendor/aokp/configs/common_drm_phone.mk
+
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/tuna
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/maguro
 
