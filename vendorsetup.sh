@@ -5,6 +5,11 @@ add_lunch_combo aokp_grouper-userdebug
 add_lunch_combo aokp_maguro-userdebug
 add_lunch_combo aokp_p3113-userdebug
 add_lunch_combo aokp_p5113-userdebug
+add_lunch_combo aokp_fascinatemtd-userdebug
+add_lunch_combo aokp_maguro-userdebug
+add_lunch_combo aokp_mezmerizemtd-userdebug
+add_lunch_combo aokp_grouper-userdebug
+add_lunch_combo aokp_showcasemtd-userdebug
 add_lunch_combo aokp_stingray-userdebug
 add_lunch_combo aokp_toro-userdebug
 add_lunch_combo aokp_toroplus-userdebug
