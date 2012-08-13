@@ -2,37 +2,37 @@
 <resources>
 
 	<string-array name="available_toggles_entries">
-		<item>2G</item>
-		<item>AIRPLANE_MODE</item>
-		<item>AP</item>
-		<item>BT</item>
-		<item>DATA</item>
-		<item>GPS</item>
 		<item>ROTATE</item>
+		<item>BT</item>
+		<item>GPS</item>
+		<item>WIFI</item>
+		<item>AIRPLANE_MODE</item>
+		<item>VIBRATE</item>
 		<item>SILENT</item>
-		<item>SWAGGER</item>
 		<item>SYNC</item>
+		<item>DATA</item>
+		<item>2G</item>
+		<item>AP</item>
 		<item>TETHER</item>
 		<item>TORCH</item>
-		<item>VIBRATE</item>
-		<item>WIFI</item>
+		<item>SWAGGER</item>
 	</string-array>
 	
 	<string-array name="available_toggles_values">
-		<item>2G</item>
-		<item>Airplane mode</item>
 		<item>Auto-rotate</item>
 		<item>BT</item>
-		<item>Data</item>
 		<item>GPS</item>
-		<item>Silent</item>
-		<item>Swagger</item>
-		<item>Sync</item>
-		<item>Torch</item>
-		<item>USB Tether</item>
-		<item>Vibrate</item>
 		<item>Wi-Fi</item>
+		<item>Airplane mode</item>
+		<item>Vibrate</item>
+		<item>Silent</item>
+		<item>Sync</item>
+		<item>Data</item>
+		<item>2G</item>
 		<item>Wi-Fi Tether (AP)</item>
+		<item>USB Tether</item>
+		<item>Torch</item>
+		<item>Swagger</item>
 	</string-array>
 
 </resources>
