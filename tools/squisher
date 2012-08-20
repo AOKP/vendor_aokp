@@ -147,6 +147,7 @@ DATE=$(date +%h-%d-%y)
 MODVERSION="$TARGET_PRODUCT"_"$DATE"
 OUTFILE=$OUT/$MODVERSION.zip
 
+
 # Pack it up and sign
 printf "Zipping package..."
 ( cd $REPACK/ota; zip $QUIET -r $REPACK/update.zip . )
