@@ -2,6 +2,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/crespo.mk \
     $(LOCAL_DIR)/crespo4g.mk \
     $(LOCAL_DIR)/d2tmo.mk \
+    $(LOCAL_DIR)/evita.mk \
     $(LOCAL_DIR)/grouper.mk \
     $(LOCAL_DIR)/hercules.mk \
     $(LOCAL_DIR)/maguro.mk \
