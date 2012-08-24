@@ -146,6 +146,11 @@ VERSION=`cat "vendor/aokp/configs/common_versions.mk" | grep ro.aokp.version | h
 MODVERSION="$TARGET_PRODUCT"_"$VERSION"
 OUTFILE=$OUT/$MODVERSION.zip
 
+# Temporary cp file
+if [ "$TARGET_PRODUCT" = "aokp_d2usc" ]; then
+cp -f vendor/aokp/tools/updater-script $REPACK/ota/META-INF/com/google/android/updater-script
+fi
+
 # Pack it up and sign
 printf "Zipping package..."
 ( cd $REPACK/ota; zip $QUIET -r $REPACK/update.zip . )
