@@ -4,7 +4,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JRO03H BUILD_VERSION_TAGS=relea
 DATE = $(shell date +%h-%d-%y)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.aokp.version=$(TARGET_PRODUCT)_jb-build-1
+    ro.aokp.version=$(TARGET_PRODUCT)_jb-$(DATE)
 
 # Goo updater app
 PRODUCT_PROPERTY_OVERRIDES += \
