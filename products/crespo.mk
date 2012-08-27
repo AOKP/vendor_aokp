@@ -23,3 +23,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/bootanimation/bootanimation_480_800.zip:system/media/bootanimation.zip
+    
+PRODUCT_PROPERTY_OVERRIDES += \
+	gfx.highend_override=true
