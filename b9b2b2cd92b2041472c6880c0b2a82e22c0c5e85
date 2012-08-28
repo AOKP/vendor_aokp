@@ -1,0 +1,9 @@
+Change-Id: Ib9b2b2cd92b2041472c6880c0b2a82e22c0c5e85
+Code-Review+2: Gergely Szell (sethyx) <sethyx@gmail.com>
+Verified+1: Gergely Szell (sethyx) <sethyx@gmail.com>
+Code-Review+1: Pierpaolo Pernici <pierpaolo@gmail.com>
+Submitted-by: Gergely Szell (sethyx) <sethyx@gmail.com>
+Submitted-at: Tue, 28 Aug 2012 22:10:52 +0100
+Reviewed-on: http://gerrit.sudoservers.com/3004
+Project: AOKP/vendor_aokp
+Branch: refs/heads/jb
