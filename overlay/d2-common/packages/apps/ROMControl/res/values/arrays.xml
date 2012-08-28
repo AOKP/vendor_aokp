@@ -10,6 +10,7 @@
 		<item>VIBRATE</item>
 		<item>SILENT</item>
 		<item>SYNC</item>
+                <item>LTE</item>
 		<item>DATA</item>
 		<item>2G</item>
 		<item>AP</item>
@@ -28,6 +29,7 @@
 		<item>@string/toggle_vibrate</item>
 		<item>@string/toggle_silent</item>
 		<item>@string/toggle_sync</item>
+                <item>@sring/toggle_lte</item>
 		<item>@string/toggle_data</item>
 		<item>@string/toggle_2g</item>
 		<item>@string/toggle_wifi_ap</item>
