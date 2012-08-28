@@ -25,3 +25,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/bootanimation/bootanimation_720_1280.zip:system/media/bootanimation.zip
+
+# LED brightness property
+PRODUCT_PROPERTY_OVERRIDES += \
+     persist.sys.led-brightness=31
