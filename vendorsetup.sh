@@ -8,6 +8,7 @@ add_lunch_combo aokp_captivatemtd-userdebug
 add_lunch_combo aokp_d2tmo-userdebug
 add_lunch_combo aokp_galaxysmtd-userdebug
 add_lunch_combo aokp_hercules-userdebug
+add_lunch_combo aokp_i9100-userdebug
 add_lunch_combo aokp_n7000-userdebug
 add_lunch_combo aokp_p3113-userdebug
 add_lunch_combo aokp_p5113-userdebug
