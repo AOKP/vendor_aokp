@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<property name="Tablet UI (Mid)" description="Hybrid mode /*g(on)f*/(br)Tablet workspace(br)2 Icons(br)Clock" active="true">
+
+        <setting type="Hybrid" target="%hybrid_mode" value="1"/>
+        <setting type="Hybrid" target="com.android.systemui.dpi" value="220"/>
+        <setting type="Hybrid" target="com.android.systemui.layout" value="720"/>
+        <setting type="Android" target="status_bar_clock" value="1"/>
+        <setting type="Android" target="max_notification_icons" value="2"/>
+
+</property>
