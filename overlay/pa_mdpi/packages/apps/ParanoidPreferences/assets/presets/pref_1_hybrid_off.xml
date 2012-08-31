@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<property name="Hybrid off" description="Hybrid mode /*r(off)f*/(br)Stock workspace" active="true">
+
+        <setting type="Hybrid" target="%hybrid_mode" value="0"/>
+        <setting type="Hybrid" target="com.android.systemui.dpi" value="%rom_default_dpi"/>
+        <setting type="Hybrid" target="com.android.systemui.layout" value="%rom_default_layout"/>
+        <setting type="Android" target="status_bar_clock" value="1"/>
+        <setting type="Android" target="max_notification_icons" value="5"/>
+
+</property>

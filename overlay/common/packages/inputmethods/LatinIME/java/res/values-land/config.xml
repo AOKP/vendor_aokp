@@ -1,0 +1,3 @@
+<resources>
+    <bool name="config_use_fullscreen_mode">false</bool>
+</resources>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<property name="Phablet UI" description="Hybrid mode /*g(on)f*/(br)Phablet workspace" active="true">
+
+        <setting type="Hybrid" target="%hybrid_mode" value="1"/>
+        <setting type="Hybrid" target="com.android.systemui.dpi" value="225"/>
+        <setting type="Hybrid" target="com.android.systemui.layout" value="600"/>
+        <setting type="Android" target="status_bar_clock" value="1"/>
+        <setting type="Android" target="max_notification_icons" value="5"/>
+
+</property>

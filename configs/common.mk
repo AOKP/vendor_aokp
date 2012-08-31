@@ -73,5 +73,29 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 PRODUCT_COPY_FILES += packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml
 
+PRODUCT_COPY_FILES += \
+    vendor/aokp/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/properties.conf \
+    vendor/aokp/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/backup.conf
+
+# ParanoidAndroid Packages
+PRODUCT_PACKAGES += \
+    ParanoidPreferences \
+
+# ParanoidAndroid Overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
+PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/$(TARGET_PRODUCT)
+
+# Allow device family to add overlays and use a same prop.conf
+ifneq ($(OVERLAY_TARGET),)
+    PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/$(OVERLAY_TARGET)
+    PA_CONF_SOURCE := $(OVERLAY_TARGET)
+else
+    PA_CONF_SOURCE := $(TARGET_PRODUCT)
+endif
+
+PRODUCT_COPY_FILES += \
+    vendor/aokp/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/properties.conf \
+    vendor/aokp/prebuilt/$(PA_CONF_SOURCE).conf:system/etc/paranoid/backup.conf
+
 # Inherit common build.prop overrides
 -include vendor/aokp/configs/common_versions.mk
