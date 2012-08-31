@@ -1,0 +1,9 @@
+Change-Id: Ice46144388ff875f30bebe04411c2111248c9dc8
+Code-Review+2: Dirk Rettschlag (MarcLandis) <dirk.rettschlag@gmail.com>
+Verified+1: Dirk Rettschlag (MarcLandis) <dirk.rettschlag@gmail.com>
+Code-Review+1: Pierpaolo Pernici <pierpaolo@gmail.com>
+Submitted-by: Dirk Rettschlag (MarcLandis) <dirk.rettschlag@gmail.com>
+Submitted-at: Fri, 31 Aug 2012 09:44:29 +0100
+Reviewed-on: http://gerrit.sudoservers.com/3047
+Project: AOKP/vendor_aokp
+Branch: refs/heads/jb
