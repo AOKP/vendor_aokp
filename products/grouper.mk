@@ -2,7 +2,7 @@
 $(call inherit-product, device/asus/grouper/full_grouper.mk)
 
 # Inherit common product files.
-$(call inherit-product, vendor/aokp/configs/common_tablet.mk)
+$(call inherit-product, vendor/aokp/configs/common_tablet_small.mk)
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/grouper
 
