@@ -48,6 +48,12 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/aokp/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+# backuptool
+PRODUCT_COPY_FILES += \
+    vendor/aokp/prebuilt/common/bin/backuptool.functions:system/bin/backuptool.functions \
+    vendor/aokp/prebuilt/common/bin/backuptool.sh:system/bin/backuptool.sh \
+    vendor/aokp/prebuilt/common/addon.d/70-backup.sh:system/addon.d/70-backup.sh
+
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
