@@ -4,13 +4,14 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_DISPLAY_ID=JRO03H BUILD_VERSION_TAGS=relea
 DATE = $(shell date +%h-%d-%y)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.aokp.version=$(TARGET_PRODUCT)_jb-build-1
-
-# Goo updater app
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.goo.developerid=aokp \
+    ro.goo.developerid=KAsp3rd \
     ro.goo.rom=aokp \
-    ro.goo.version=21
+    ro.goo.version=$(DATE)
+
+
+PRODUCT_PROPERTY_OVERRIDES += \
+	ro.aokp.version=$(TARGET_PRODUCT)_nightly_$(DATE)
+
 
 # Camera shutter sound property
 PRODUCT_PROPERTY_OVERRIDES += \
