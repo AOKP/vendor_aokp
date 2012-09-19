@@ -1,0 +1,11 @@
+Change-Id: I2e5a06979c0252ea884972dec3cb6453593b0c84
+Code-Review+1: Roman Birg <romanbirg@gmail.com>
+Code-Review+1: Gergely Szell (sethyx) <sethyx@gmail.com>
+Code-Review+2: Khas Mek <boushh@gmail.com>
+Verified+1: Khas Mek <boushh@gmail.com>
+Code-Review+1: Jonathan Steadman <xxwhitehawk@gmail.com>
+Submitted-by: Khas Mek <boushh@gmail.com>
+Submitted-at: Wed, 19 Sep 2012 18:15:01 +0100
+Reviewed-on: http://gerrit.sudoservers.com/3362
+Project: AOKP/vendor_aokp
+Branch: refs/heads/jb
