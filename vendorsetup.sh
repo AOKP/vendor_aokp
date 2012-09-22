@@ -21,3 +21,4 @@ add_lunch_combo aokp_grouper-userdebug
 add_lunch_combo aokp_vibrantmtd-userdebug
 add_lunch_combo aokp_i9100-userdebug
 add_lunch_combo aokp_i9100g-userdebug
+add_lunch_combo aokp_i777-userdebug

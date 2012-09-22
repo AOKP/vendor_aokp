@@ -20,4 +20,5 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/toroplus.mk \
     $(LOCAL_DIR)/vibrantmtd.mk \
     $(LOCAL_DIR)/i9100.mk \
-    $(LOCAL_DIR)/i9100g.mk
+    $(LOCAL_DIR)/i9100g.mk \
+    $(LOCAL_DIR)/i777.mk
