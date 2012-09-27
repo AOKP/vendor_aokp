@@ -19,6 +19,8 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/p5100.mk \
     $(LOCAL_DIR)/p5110.mk \
     $(LOCAL_DIR)/p5113.mk \
+    $(LOCAL_DIR)/primoc.mk \
+    $(LOCAL_DIR)/primou.mk \
     $(LOCAL_DIR)/toro.mk \
     $(LOCAL_DIR)/toroplus.mk \
     $(LOCAL_DIR)/vibrantmtd.mk
