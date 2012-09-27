@@ -2,6 +2,7 @@
 PRODUCT_COPY_FILES +=  \
     vendor/aokp/prebuilt/common_drm/com.google.widevine.software.drm.xml:system/etc/permissions/com.google.widevine.software.drm.xml \
     vendor/aokp/prebuilt/common_drm/com.google.widevine.software.drm.jar:system/framework/com.google.widevine.software.drm.jar \
+    vendor/aokp/prebuilt/common_drm/phone/lib/libdrmdecrypt.so:system/lib/libdrmdecrypt.so \
     vendor/aokp/prebuilt/common_drm/phone/lib/libfrsdk.so:system/lib/libfrsdk.so \
     vendor/aokp/prebuilt/common_drm/phone/lib/libWVphoneAPI.so:system/lib/libWVphoneAPI.so \
     vendor/aokp/prebuilt/common_drm/phone/vendor/lib/libwvdrm_L1.so:system/vendor/lib/libwvdrm_L1.so \
