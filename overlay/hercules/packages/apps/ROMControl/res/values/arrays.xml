@@ -34,7 +34,7 @@
 		<item>@string/toggle_usb_tether</item>
 		<item>@string/toggle_torch</item>
 		<item>@string/toggle_nfc</item>
-                <item>@string/toggle_swagger</item>
+		<item>@string/toggle_swagger</item>
 	</string-array>
 
 </resources>
