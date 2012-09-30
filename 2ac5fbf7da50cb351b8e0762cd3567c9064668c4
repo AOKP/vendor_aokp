@@ -1,0 +1,8 @@
+Change-Id: Ib64f32add643b7af509fca046b89a56b118afd2a
+Code-Review+2: Gergely Szell (sethyx) <sethyx@gmail.com>
+Verified+1: Gergely Szell (sethyx) <sethyx@gmail.com>
+Submitted-by: Gergely Szell (sethyx) <sethyx@gmail.com>
+Submitted-at: Sun, 30 Sep 2012 09:56:06 +0100
+Reviewed-on: http://gerrit.sudoservers.com/3506
+Project: AOKP/vendor_aokp
+Branch: refs/heads/jb
