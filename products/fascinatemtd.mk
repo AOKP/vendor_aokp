@@ -7,6 +7,9 @@ $(call inherit-product, vendor/aokp/configs/common_phone.mk)
 # Inherit GSM common stuff
 $(call inherit-product, vendor/aokp/configs/gsm.mk)
 
+# Inherit common Verizon Wireless Files
+$(call inherit-product, vendor/aokp/configs/vzw.mk)
+
 # Inherit Aries-common overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/aries-common
 
