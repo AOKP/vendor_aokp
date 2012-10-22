@@ -25,4 +25,5 @@ add_lunch_combo aokp_p5110-userdebug
 add_lunch_combo aokp_p5113-userdebug
 add_lunch_combo aokp_tf101-userdebug
 add_lunch_combo aokp_quincyatt-userdebug
+add_lunch_combo aokp_skyrocket-userdebug
 add_lunch_combo aokp_vibrantmtd-userdebug
