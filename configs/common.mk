@@ -18,6 +18,7 @@ PRODUCT_PACKAGES += \
     ROMControl \
     SuperSU \
     SwagPapers \
+    Torch \
     UnicornPorn
 
 # Use prebuilt su until fixed when built
