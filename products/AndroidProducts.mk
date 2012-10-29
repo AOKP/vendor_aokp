@@ -23,6 +23,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/p5100.mk \
     $(LOCAL_DIR)/p5110.mk \
     $(LOCAL_DIR)/p5113.mk \
+    $(LOCAL_DIR)/pyramid.mk \
     $(LOCAL_DIR)/quincyatt.mk \
     $(LOCAL_DIR)/tf101.mk \
     $(LOCAL_DIR)/toro.mk \
