@@ -170,10 +170,16 @@ echo $CL_CYN"Zipping package..."$CL_RST
 echo
 echo $CL_CYN"Signing package..."$CL_RST
 SECURITYDIR=$ANDROID_BUILD_TOP/build/target/product/security
-java -Xmx1024m \
-	-jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar \
-	-w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
-	$REPACK/update.zip $OUTFILE
+if [ -z $OUT_DIR_COMMON_BASE ]
+then
+    OUT_BASE=$ANDROID_BUILD_TOP/out
+else
+    OUT_BASE=$OUT_DIR_COMMON_BASE/$(basename $PWD)
+fi
+    java -Xmx1024m \
+            -jar $OUT_BASE/host/$OUT_TARGET_HOST/framework/signapk.jar \
+            -w $SECURITYDIR/testkey.x509.pem $SECURITYDIR/testkey.pk8 \
+            $REPACK/update.zip $OUTFILE
 echo
 echo $CL_CYN"Cleaning up..."$CL_RST
 rm -rf $REPACK
