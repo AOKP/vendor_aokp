@@ -142,8 +142,14 @@ then
 
     [ $QUIET ] || echo $CL_YLW"Resigning with cert: `echo $CERT`"$CL_RST
 
-    [ $QUIET ] || echo java -jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar $ANDROID_BUILD_TOP/$CERT $ANDROID_BUILD_TOP/$KEY $NAME signed_$NAME
-    java -jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar $ANDROID_BUILD_TOP/$CERT $ANDROID_BUILD_TOP/$KEY $NAME signed_$NAME
+    if [ -z $OUT_DIR_COMMON_BASE ]
+    then
+        [ $QUIET ] || echo java -jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar $ANDROID_BUILD_TOP/$CERT $ANDROID_BUILD_TOP/$KEY $NAME signed_$NAME
+        java -jar $ANDROID_BUILD_TOP/out/host/$OUT_TARGET_HOST/framework/signapk.jar $ANDROID_BUILD_TOP/$CERT $ANDROID_BUILD_TOP/$KEY $NAME signed_$NAME
+    else
+        [ $QUIET ] || echo java -jar $OUT_DIR_COMMON_BASE/aokp/host/$OUT_TARGET_HOST/framework/signapk.jar $ANDROID_BUILD_TOP/$CERT $ANDROID_BUILD_TOP/$KEY $NAME signed_$NAME
+        java -jar $OUT_DIR_COMMON_BASE/aokp/host/$OUT_TARGET_HOST/framework/signapk.jar $ANDROID_BUILD_TOP/$CERT $ANDROID_BUILD_TOP/$KEY $NAME signed_$NAME
+    fi
     [ $QUIET ] || echo $CL_GRN"Zipalign.."$CL_RST
     zipalign -f 4 signed_$NAME $BASE/$1
     if [ ! $QUIET ]; then
