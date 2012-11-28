@@ -5,7 +5,7 @@
 # cyanogen
 # AOKP
 
-. $ANDROID_BUILD_TOP/vendor/aokp/tools/colors
+. $ANDROID_BUILD_TOP/vendor/aokp/tools/commands
 
 OUT_TARGET_HOST=`uname -a | grep Darwin`
 if [ -z "$OUT_TARGET_HOST" ]
@@ -184,6 +184,9 @@ echo
 img=`basename $OUTFILE`
 cd `dirname $OUTFILE`
 $MD5 $img >$img.md5sum
+# grab zip size from ./commands
+OUTFILE=$ZIPSIZE
+
 echo
 echo $CL_CYN"Package complete:"$CL_MAG" $OUTFILE"$CL_RST
 echo $CL_CYN"md5:"$CL_MAG" $(cat $img.md5sum | awk '{ print $1 }')"$CL_RST
