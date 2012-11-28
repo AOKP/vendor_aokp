@@ -21,4 +21,4 @@ fi
 GETDATE="$( shell LC_ALL=C date +%h-%d-%y)"
 
 # Zip Size
-ZIPSIZE=`du -sh $OUTFILE | egrep '^[0-9]+(,[0-9]+)*M.*$'`
+ZIPSIZE=`ls -lah $OUTFILE | awk '{ print $5}' `
