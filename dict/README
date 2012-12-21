@@ -1,0 +1,17 @@
+Welcome to the AOKP Dictionary (KangDict)...
+
+###################################################
+# all changes to the word list should be          #
+# accompanied with a binary update                #
+###################################################
+
+to compile a new dictionary and install it properly example for English:
+
+. build/envsetup.sh && lunch
+makedict_aosp \
+   -s vendor/aokp/dict/words_en.xml \
+   -d vendor/aokp/overlay/dictionaries/packages/inputmethods/LatinIME/java/res/raw/main_en.dict
+
+*NOTE*
+Please note the KangDict may contains words recognized
+    by our community but not the greater world... yet!
