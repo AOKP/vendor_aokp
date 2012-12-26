@@ -4,3 +4,4 @@ add_lunch_combo aokp_manta-userdebug
 add_lunch_combo aokp_toro-userdebug
 add_lunch_combo aokp_toroplus-userdebug
 add_lunch_combo aokp_grouper-userdebug
+add_lunch_combo aokp_n7000-userdebug
