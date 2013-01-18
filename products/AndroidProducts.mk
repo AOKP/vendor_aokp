@@ -27,4 +27,5 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/tf101.mk \
     $(LOCAL_DIR)/toro.mk \
     $(LOCAL_DIR)/toroplus.mk \
-    $(LOCAL_DIR)/vibrantmtd.mk
+    $(LOCAL_DIR)/vibrantmtd.mk \
+    $(LOCAL_DIR)/vigor.mk
