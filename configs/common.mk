@@ -45,6 +45,21 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/aokp/prebuilt/common/bin/sysinit:system/bin/sysinit
 
+#ifeq ($(BOARD_HAVE_BLUETOOTH_BLUEZ),true)
+PRODUCT_COPY_FILES += \
+    vendor/aokp/prebuilt/common/etc/init.bluez.rc:root/init.bluez.rc \
+    system/bluetooth/data/audio.conf:system/etc/bluetooth/audio.conf \
+    system/bluetooth/data/auto_pairing.conf:system/etc/bluetooth/auto_pairing.conf \
+    system/bluetooth/data/iop_device_list.conf:system/etc/bluetooth/iop_device_list.conf \
+    system/bluetooth/data/blacklist.conf:system/etc/bluetooth/blacklist.conf \
+    system/bluetooth/data/input.conf:system/etc/bluetooth/input.conf \
+    system/bluetooth/data/network.conf:system/etc/bluetooth/network.conf
+
+PRODUCT_PACKAGES += \
+    bluetoothd \
+    hciattach
+#endif
+
 # Enable SIP+VoIP on all targets
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
