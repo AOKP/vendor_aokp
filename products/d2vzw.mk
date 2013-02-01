@@ -1,8 +1,9 @@
 # Inherit AOSP device configuration for d2vzw.
 $(call inherit-product, device/samsung/d2vzw/full_d2vzw.mk)
 
-# Inherit common cdma apns
-$(call inherit-product, vendor/aokp/configs/cdma.mk)
+# Overlay CDMA APN List
+PRODUCT_COPY_FILES += \
+   vendor/aokp/prebuilt/common/etc/apns-conf-cdma-overlay.xml:system/etc/apns-conf.xml
 
 # Inherit common product files.
 $(call inherit-product, vendor/aokp/configs/common.mk)

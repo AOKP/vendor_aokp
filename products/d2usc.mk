@@ -1,8 +1,9 @@
 # Inherit AOSP device configuration for pyramid.
 $(call inherit-product, device/samsung/d2usc/full_d2usc.mk)
 
-# Inherit common cdma apns
-$(call inherit-product, vendor/aokp/configs/cdma.mk)
+# Overlay CDMA APN List
+PRODUCT_COPY_FILES += \
+   vendor/aokp/prebuilt/common/etc/apns-conf-cdma-overlay.xml:system/etc/apns-conf.xml
 
 # Inherit common product files.
 $(call inherit-product, vendor/aokp/configs/common.mk)
