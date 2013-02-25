@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+ 	<!-- Remote config -->
+	<remote  name="github"
+        	fetch="git://github.com/" />
+	
+	<!-- Removing Repositories which are being replaced -->
+	<remove-project name="android_hardware_qcom_media" />
+	<remove-project name="android_hardware_qcom_display" />
+	<remove-project name="android_hardware_qcom_audio" />
+	<remove-project name="android_hardware_qcom_gps" />
+	<remove-project name="AOKP/frameworks_av" />
+	<remove-project name="AOKP/frameworks_native" />
+
+	<!-- These are not much commits, can be cherry-picked? -->
+	<project path="frameworks/av" name="Andromadus/android_frameworks_av" remote="github" revision="jb4.2" />
+	<project path="frameworks/native" name="Andromadus/android_frameworks_native" remote="github" revision="jb4.2" />
+
+	<!-- Other required source changes -->
+  	<project path="hardware/qcom/librpc" name="Andromadus/android_hardware_qcom_librpc" remote="github" revision="jellybean" />
+		<remove-project name="android_hardware_msm7k" /> <!-- librpc conflicts with this -->
+ 	<project path="hardware/qcom/display" name="Andromadus/android_hardware_qcom_display" remote="github" revision="jb4.2" />
+ 	<project path="hardware/qcom/audio" name="Andromadus/android_hardware_qcom_audio" remote="github" revision="Andro4.2" />
+ 	<project path="hardware/qcom/media" name="Andromadus/android_hardware_qcom_media" remote="github" revision="jb4.2" />
+  	<project path="hardware/qcom/gps" name="CyanogenMod/android_hardware_qcom_gps" remote="github" revision="jellybean" /> <!-- Old rev because things aren't merged yet. -->
+</manifest>
+
