@@ -77,7 +77,7 @@ LOCAL_MODULE_CLASS := APPS
 LOCAL_CERTIFICATE := PRESIGNED
 include $(BUILD_PREBUILT)
 
-ifneq (,$(findstring $(TARGET_DEVICE),toroplus toro crespo4g))
+ifneq (,$(findstring $(TARGET_DEVICE),toroplus toro crespo4g l900))
 include $(CLEAR_VARS)
 LOCAL_MODULE := CDMATools
 LOCAL_SRC_FILES := common/app/$(LOCAL_MODULE).apk
