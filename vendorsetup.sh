@@ -17,6 +17,7 @@ add_lunch_combo aokp_i9100g-userdebug
 add_lunch_combo aokp_i9300-userdebug
 add_lunch_combo aokp_l900-userdebug
 add_lunch_combo aokp_maserati-userdebug
+add_lunch_combo aokp_mint-userdebug
 add_lunch_combo aokp_p930-userdebug
 add_lunch_combo aokp_solana-userdebug
 add_lunch_combo aokp_spyder-userdebug
@@ -25,6 +26,7 @@ add_lunch_combo aokp_t0lte-userdebug
 add_lunch_combo aokp_t0lteatt-userdebug
 add_lunch_combo aokp_t0ltetmo-userdebug
 add_lunch_combo aokp_targa-userdebug
+add_lunch_combo aokp_tsubasa-userdebug
 add_lunch_combo aokp_umtsspyder-userdebug
 add_lunch_combo aokp_vibrantmtd-userdebug
 add_lunch_combo aokp_vs920-userdebug
