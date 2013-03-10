@@ -16,6 +16,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/mako.mk \
     $(LOCAL_DIR)/manta.mk \
     $(LOCAL_DIR)/maserati.mk \
+    $(LOCAL_DIR)/mint.mk \
     $(LOCAL_DIR)/p930.mk \
     $(LOCAL_DIR)/solana.mk \
     $(LOCAL_DIR)/spyder.mk \
@@ -25,5 +26,6 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/tilapia.mk \
     $(LOCAL_DIR)/toro.mk \
     $(LOCAL_DIR)/toroplus.mk \
+    $(LOCAL_DIR)/tsubasa.mk \
     $(LOCAL_DIR)/umtsspyder.mk \
     $(LOCAL_DIR)/vs920.mk
