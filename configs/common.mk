@@ -6,6 +6,10 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
 # Common dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/dictionaries
 
+# Superuser
+SUPERUSER_EMBEDDED := true
+SUPERUSER_PACKAGE_PREFIX := com.android.settings.superuser
+
 PRODUCT_PACKAGES += \
     AOKPtips \
     AppWidgetPicker \
