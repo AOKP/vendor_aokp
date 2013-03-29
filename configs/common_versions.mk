@@ -17,4 +17,4 @@ endif
 
 # Camera shutter sound property
 PRODUCT_PROPERTY_OVERRIDES += \
-	persist.sys.camera-sound=1
+	persist.camera.shutter.disable=1
