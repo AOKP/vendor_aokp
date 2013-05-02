@@ -4,6 +4,9 @@ $(call inherit-product, device/samsung/toro/full_toro.mk)
 # Inherit AOKP common bits
 $(call inherit-product, vendor/aokp/configs/common.mk)
 
+# Inherit common cdma apns
+$(call inherit-product, vendor/aokp/configs/cdma.mk)
+
 # Inherit common Verizon Wireless Files
 $(call inherit-product, vendor/aokp/configs/vzw.mk)
 
