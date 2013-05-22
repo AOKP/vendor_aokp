@@ -1,6 +1,7 @@
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_UTC_DATE=$(shell date +"%s")
 
+GDATE= $(shell date '+%Y%m%d')
 DATE = $(shell vendor/aokp/tools/getdate)
 
 ifneq ($(AOKP_BUILD),)
@@ -14,8 +15,11 @@ else
     ifneq ($(AOKP_NIGHTLY),)
         # AOKP_NIGHTLY=true
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.aokp.version=$(TARGET_PRODUCT)_nightly_$(DATE)
-    else
+            ro.goo.developerid=aokp \
+            ro.goo.rom=aokp \
+            ro.goo.version=$(GDATE) \
+                ro.aokp.version=$(TARGET_PRODUCT)_nightly_$(DATE)
+else
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.aokp.version=$(TARGET_PRODUCT)_unofficial_$(DATE)
     endif
