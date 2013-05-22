@@ -14,11 +14,15 @@ else
     ifneq ($(AOKP_NIGHTLY),)
         # AOKP_NIGHTLY=true
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.aokp.version=$(TARGET_PRODUCT)_nightly_$(DATE)
-    else
+            ro.goo.developerid=aokp \
+            ro.goo.rom=aokp \
+            ro.goo.version=$(GDATE) \
+                ro.aokp.version=$(TARGET_PRODUCT)_nightly_$(DATE)
+else
+else
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.aokp.version=$(TARGET_PRODUCT)_unofficial_$(DATE)
-    endif
+        endif
 endif
 
 # Camera shutter sound property
