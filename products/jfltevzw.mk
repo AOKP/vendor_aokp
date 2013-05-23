@@ -19,4 +19,4 @@ PRIVATE_BUILD_DESC="jfltevzw-user 4.2.2 JDQ39 I545VRUAMDK release-keys"
 
 # boot animation
 PRODUCT_COPY_FILES += \
-       vendor/aokp/prebuilt/bootanimation/bootanimation_1920_1280.zip:system/media/bootanimation-alt.zip
+       vendor/aokp/prebuilt/bootanimation/bootanimation_1080_1920.zip:system/media/bootanimation-alt.zip
