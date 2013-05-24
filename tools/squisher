@@ -165,6 +165,20 @@ rm -rf $REPACK/ota/recovery
 [ -d $REPACK/ota/system/lib/modules ] && \
 	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
+# If loki_flash is enabled swap in boot.lok aboot image
+DEVICE=`sed -n -e'/ro.product.device/s/^.*=//p' $REPACK/ota/system/build.prop`
+if [ "$DEVICE" = "jfltevzw" ]; then
+    echo "'Loki'-fying...."
+    PREBUILT=$ANDROID_BUILD_TOP/vendor/aokp/prebuilt/jfltevzw
+    IN=$REPACK/ota/boot.img
+    LOK=$REPACK/ota/boot.lok
+    HERE=`pwd`
+    cd $PREBUILT
+    ./loki_patch boot aboot.img $IN $LOK
+    rm $IN
+    cp $PREBUILT/loki_flash $REPACK/ota/loki_flash
+fi
+
 # Determine what to name the new signed package
 
 #MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $REPACK/ota/system/build.prop`
