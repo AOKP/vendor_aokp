@@ -1,4 +1,4 @@
-# Inherit AOSP device configuration for galaxys2.
+# Inherit AOSP device configuration
 $(call inherit-product, device/samsung/n7000/full_n7000.mk)
 
 # Inherit common product files.
