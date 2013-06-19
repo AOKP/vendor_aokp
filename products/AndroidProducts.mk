@@ -15,6 +15,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/jfltetmo.mk \
     $(LOCAL_DIR)/jflteusc.mk \
     $(LOCAL_DIR)/jfltevzw.mk \
+    $(LOCAL_DIR)/jfltexx.mk \
     $(LOCAL_DIR)/l900.mk \
     $(LOCAL_DIR)/m7att.mk \
     $(LOCAL_DIR)/m7spr.mk \
