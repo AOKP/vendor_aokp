@@ -1,4 +1,4 @@
-[Android Open Kang Project](aokp.co)
+AOKP Jellybean-mr1 for Otter
 ====================================
 
 
@@ -9,7 +9,7 @@ Please read the [AOSP building instructions](http://source.android.com/source/in
 
 Initialize
 
-    repo init -u https://github.com/AOKP/platform_manifest.git -b jb-mr1
+    repo init -u https://github.com/SlashDW/platform_manifest.git -b aokp-jb-mr1
 
 Run the following to sync the source
 
@@ -47,6 +47,6 @@ After the sync is finished, please read the [instructions from the Android site]
 You can also build (and see how long it took) for specific devices like this:
 
     . build/envsetup.sh
-    time brunch aokp_mako-userdebug
+    time brunch aokp_otter-userdebug
 
 Remember to `make clobber` every now and then!
