@@ -109,3 +109,7 @@ PRODUCT_COPY_FILES += \
 # World APNs
 PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+
+# block stock OTAs
+PRODUCT_COPY_FILES += \
+    vendor/aokp/prebuilt/common/bin/otablock:system/bin/otablock
