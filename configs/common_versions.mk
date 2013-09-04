@@ -15,10 +15,10 @@ else
     ifneq ($(AOKP_NIGHTLY),)
         # AOKP_NIGHTLY=true
         PRODUCT_PROPERTY_OVERRIDES += \
-            ro.aokp.version=$(TARGET_PRODUCT)_nightly_$(DATE)
+            ro.aokp.version=$(TARGET_PRODUCT)-$(AOKP_BRANCH)-nightly_$(DATE)
     else
-    PRODUCT_PROPERTY_OVERRIDES += \
-        ro.aokp.version=$(TARGET_PRODUCT)_unofficial_$(DATE)
+        PRODUCT_PROPERTY_OVERRIDES += \
+            ro.aokp.version=$(TARGET_PRODUCT)-$(AOKP_BRANCH)-unofficial_$(DATE)
     endif
 endif
 
