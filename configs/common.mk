@@ -20,6 +20,11 @@ PRODUCT_PACKAGES += \
     Torch \
     UnicornPorn
 
+# CM Hardware Abstraction Framework
+PRODUCT_PACKAGES += \
+    org.cyanogenmod.hardware \
+    org.cyanogenmod.hardware.xml
+
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
