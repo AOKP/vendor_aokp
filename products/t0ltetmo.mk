@@ -10,6 +10,8 @@ $(call inherit-product, vendor/aokp/configs/gsm.mk)
 # Inherit common product files.
 $(call inherit-product, vendor/aokp/configs/common.mk)
 
+PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/t0lte
+
 # boot animation
 PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/bootanimation/bootanimation_720_1280.zip:system/media/bootanimation-alt.zip

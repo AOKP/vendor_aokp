@@ -8,7 +8,7 @@ $(call inherit-product, vendor/aokp/configs/cdma.mk)
 $(call inherit-product, vendor/aokp/configs/common.mk)
 
 # t0ltecdma Overlays
-PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/t0ltecdma
+PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/t0lte
 
 # Setup device specific product configuration.
 PRODUCT_NAME := aokp_l900
