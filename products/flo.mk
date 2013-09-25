@@ -4,6 +4,9 @@ $(call inherit-product, vendor/aokp/configs/common_tablet.mk)
 # Inherit device configuration
 $(call inherit-product, device/asus/flo/full_flo.mk)
 
+# Inherit GSM common stuff
+$(call inherit-product, vendor/aokp/configs/gsm.mk)
+
 # Flo Overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/flo
 
