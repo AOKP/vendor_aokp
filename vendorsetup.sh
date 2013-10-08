@@ -1,2 +1,2 @@
-add_lunch_combo aokp_m7ul-userdebug
-add_lunch_combo aokp_pollux-userdebug
+add_lunch_combo mighty_m7ul-userdebug
+add_lunch_combo mighty_pollux-userdebug
