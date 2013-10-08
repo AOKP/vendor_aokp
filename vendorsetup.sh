@@ -1,2 +1,3 @@
+add_lunch_combo mighty_honami-userdebug
 add_lunch_combo mighty_m7ul-userdebug
 add_lunch_combo mighty_pollux-userdebug
