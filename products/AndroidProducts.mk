@@ -2,6 +2,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/a510.mk \
     $(LOCAL_DIR)/d2att.mk \
     $(LOCAL_DIR)/d2tmo.mk \
+    $(LOCAL_DIR)/d2spr.mk \
     $(LOCAL_DIR)/d2usc.mk \
     $(LOCAL_DIR)/d2vzw.mk \
     $(LOCAL_DIR)/evita.mk \
@@ -23,6 +24,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/m7spr.mk \
     $(LOCAL_DIR)/m7tmo.mk \
     $(LOCAL_DIR)/m7ul.mk \
+    $(LOCAL_DIR)/m7vzw.mk \
     $(LOCAL_DIR)/maguro.mk \
     $(LOCAL_DIR)/mako.mk \
     $(LOCAL_DIR)/manta.mk \

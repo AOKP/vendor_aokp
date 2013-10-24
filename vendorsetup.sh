@@ -8,6 +8,7 @@ add_lunch_combo aokp_tilapia-userdebug
 add_lunch_combo aokp_manta-userdebug
 add_lunch_combo aokp_d2att-userdebug
 add_lunch_combo aokp_d2tmo-userdebug
+add_lunch_combo aokp_d2spr-userdebug
 add_lunch_combo aokp_d2usc-userdebug
 add_lunch_combo aokp_d2vzw-userdebug
 add_lunch_combo aokp_evita-userdebug
@@ -28,6 +29,7 @@ add_lunch_combo aokp_m7att-userdebug
 add_lunch_combo aokp_m7spr-userdebug
 add_lunch_combo aokp_m7tmo-userdebug
 add_lunch_combo aokp_m7ul-userdebug
+add_lunch_combo aokp_m7vzw-userdebug
 add_lunch_combo aokp_maserati-userdebug
 add_lunch_combo aokp_mint-userdebug
 add_lunch_combo aokp_odin-userdebug
