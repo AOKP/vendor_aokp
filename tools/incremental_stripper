@@ -1,0 +1,26 @@
+#!/bin/bash
+. $ANDROID_BUILD_TOP/vendor/aokp/tools/colors
+OLDOTA=$1
+OTA=$2
+cd $OLDOTA/
+
+for i in $(find .)
+do
+cd $OLDOTA/
+if [ ! -d ${i} ]
+then
+  if [ -f ${i} ] && [ -f ${OTA}/${i} ]
+  then
+   M1=$(md5sum ${i})
+   cd $OTA/
+   M2=$(md5sum ${i})
+   if [ "${M1}" == "${M2}" ]
+   then
+     echo -e $CL_BLU"stripping away ${i}"$CL_RST
+     rm ${i}
+   fi
+  fi
+fi
+done
+#system should not be formatted as this will be a partial zip
+sed -i "/format.*system/d" $OLDOTA/META-INF/com/google/android/updater-script
