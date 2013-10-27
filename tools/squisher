@@ -46,7 +46,28 @@ if [ ! -f "$OTAPACKAGE" ]; then
 	exit 1
 fi
 
+# Find old ota package here
+if [ "$BUILD_INCREMENTAL_OTA" == "true" ]; then
+	OLDOTAPACKAGE=$BUILD_INCREMENTAL_LAST_DIR/${TARGET_PRODUCT}-ota-last.zip
+
+	if [ ! -f "$OLDOTAPACKAGE" ]; then
+		BUILD_INCREMENTAL_OTA="false"
+		if [ -d "$BUILD_INCREMENTAL_LAST_DIR" ]; then
+			#if this is the first time incremental flag has been switched on
+			#then we would not have a last ota, but we need to start having 
+			#one from today onwards ;)
+			cp -f $OTAPACKAGE $OLDOTAPACKAGE
+		fi
+		echo -e $CL_RED"ERROR: $OLDOTAPACKAGE does not exist."$CL_RST;
+		echo -e $CL_RED"Incremental build aborted. Continuing full build."$CL_RST;
+		exit 1
+	fi
+
+fi
+
+
 OPTICHARGER=$ANDROID_BUILD_TOP/vendor/aokp/tools/opticharger
+INCREMENTAL_STRIPPER=$ANDROID_BUILD_TOP/vendor/aokp/tools/incremental_stripper
 QUIET=-q
 DELETE_BINS="applypatch applypatch_static check_prereq recovery updater"
 
@@ -94,6 +115,29 @@ cd $REPACK/ota
 echo -e $CL_CYN"Unpacking $OTAPACKAGE..."$CL_RST
 unzip $QUIET $OTAPACKAGE
 echo -e
+
+
+#unpack older ota against which we will validate for increment
+if [ "$BUILD_INCREMENTAL_OTA" == "true" ]
+then
+	mkdir $REPACK/oldota
+	cd $REPACK/oldota
+	echo -e $CL_YLW"Unpacking $OLDOTAPACKAGE..."$CL_RST
+	unzip $QUIET $OLDOTAPACKAGE
+	#The job of oldotapackage is finished once we have an unzipped copy of it.
+	#We replace the last ota with the ota (unsquished) that we have now
+	#This is step is important, so that we can always validate against the 
+	#most recent last otapackage
+	rm -rf $OLDOTAPACKAGE
+	cp -f $OTAPACKAGE $OLDOTAPACKAGE
+	cd $REPACK/ota
+	echo -e
+fi
+
+#Handle incremental stripping here (and come back to directory)
+$INCREMENTAL_STRIPPER $REPACK/oldota $REPACK/ota
+cd $REPACK/ota
+
 
 # Move all apks to the same directory so xargs can
 # use also with framework-res.apk. This allow process
@@ -171,6 +215,7 @@ rm -rf $REPACK/ota/recovery
 VERSION=`sed -n -e'/ro.aokp.version/s/^.*=//p' $REPACK/ota/system/build.prop`
 MODVERSION="$VERSION"
 OUTFILE=$OUT/$MODVERSION.zip
+
 
 # Pack it up and sign
 echo -e $CL_CYN"Zipping package..."$CL_RST
