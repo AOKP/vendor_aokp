@@ -1,0 +1,22 @@
+#!/bin/bash
+THIS=$1
+OTHER=$2
+cd $THIS/
+
+for i in $(find .)
+do
+cd $THIS/
+if [ ! -d ${i} ]
+then
+  if [ -f ${i} ] && [ -f ${OTHER}/${i} ]
+  then
+   M1=$(md5sum ${i})
+   cd $OTHER/
+   M2=$(md5sum ${i})
+   if [ "${M1}" == "${M2}" ]
+   then
+     rm -v ${i}
+   fi
+  fi
+fi
+done
