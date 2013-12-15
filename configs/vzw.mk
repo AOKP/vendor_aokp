@@ -9,3 +9,5 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/vzw/etc/permissions/com.vzw.vzwapnlib.xml:system/etc/permissions/com.vzw.vzwapnlib.xml \
     vendor/aokp/prebuilt/vzw/lib/libmotricity.so:system/lib/libmotricity.so
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.com.google.clientidbase=android-verizon
