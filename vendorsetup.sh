@@ -8,6 +8,7 @@ add_lunch_combo aokp_d2att-userdebug
 add_lunch_combo aokp_d2tmo-userdebug
 add_lunch_combo aokp_d2usc-userdebug
 add_lunch_combo aokp_d2vzw-userdebug
+add_lunch_combo aokp_honami-userdebug
 add_lunch_combo aokp_i605-userdebug
 add_lunch_combo aokp_jfltecri-userdebug
 add_lunch_combo aokp_jfltecsp-userdebug
@@ -27,5 +28,6 @@ add_lunch_combo aokp_pollux-userdebug
 add_lunch_combo aokp_t0lte-userdebug
 add_lunch_combo aokp_t0lteatt-userdebug
 add_lunch_combo aokp_t0ltetmo-userdebug
+add_lunch_combo aokp_togari-userdebug
 add_lunch_combo aokp_tsubasa-userdebug
 add_lunch_combo aokp_yuga-userdebug
