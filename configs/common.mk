@@ -1,4 +1,5 @@
 SUPERUSER_EMBEDDED := true
+TARGET_NO_RECOVERY := true
 
 # Common overlay
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
