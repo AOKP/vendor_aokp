@@ -171,11 +171,14 @@ rm -rf $REPACK/ota/recovery
 	find $REPACK/ota/system/lib/modules -name "*.ko" -print0 | xargs -0 arm-eabi-strip --strip-unneeded
 
 # Determine what to name the new signed package
-
-#MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $REPACK/ota/system/build.prop`
-VERSION=`sed -n -e'/ro.aokp.version/s/^.*=//p' $REPACK/ota/system/build.prop`
-MODVERSION="$VERSION"
-OUTFILE=$OUT/$MODVERSION.zip
+if [ -z "AOKPZIPNAME" ]; then
+    #MODVERSION=`sed -n -e'/ro\.modversion/s/^.*=//p' $REPACK/ota/system/build.prop`
+    VERSION=`sed -n -e'/ro.aokp.version/s/^.*=//p' $REPACK/ota/system/build.prop`
+    MODVERSION="$VERSION"
+    OUTFILE=$OUT/$MODVERSION.zip
+else
+    OUTFILE=$AOKPZIPNAME
+fi
 
 # Pack it up and sign
 echo -e $CL_CYN"Zipping package..."$CL_RST
