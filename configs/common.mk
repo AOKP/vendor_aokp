@@ -102,3 +102,19 @@ PRODUCT_COPY_FILES += \
 # World APNs
 PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/etc/apns-conf.xml:system/etc/apns-conf.xml
+
+# Add our overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
+
+# Qualcomm Optimized Dalvik
+LOCAL_PATH:= vendor/aokp/prebuilt
+
+ifneq ($(filter msm8610 msm8x26 msm8226 msm8x74 msm8974 msm8960 msm8660 msm7627a msm7630_surf apq8084 mpq8092,$(TARGET_BOARD_PLATFORM)),)
+PRODUCT_COPY_FILES += \
+        $(LOCAL_PATH)/bin/dalvikvm:system/bin/dalvikvm \
+        $(LOCAL_PATH)/bin/dexopt:system/bin/dexopt \
+        $(LOCAL_PATH)/lib/libcutils.so:system/lib/libcutils.so \
+        $(LOCAL_PATH)/lib/libdvm.so:system/lib/libdvm.so \
+        $(LOCAL_PATH)/lib/libqc-opt.so:system/lib/libqc-opt.so
+endif
+
