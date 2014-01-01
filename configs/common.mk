@@ -106,6 +106,9 @@ PRODUCT_COPY_FILES += \
 # Add our overlays
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
 
+# Add our overlays
+PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
+
 # Qualcomm Optimized Dalvik
 LOCAL_PATH:= vendor/aokp/prebuilt
 
@@ -117,4 +120,5 @@ PRODUCT_COPY_FILES += \
         $(LOCAL_PATH)/lib/libdvm.so:system/lib/libdvm.so \
         $(LOCAL_PATH)/lib/libqc-opt.so:system/lib/libqc-opt.so
 endif
+
 
