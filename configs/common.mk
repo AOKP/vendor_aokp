@@ -8,7 +8,6 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/dictionaries
 
 PRODUCT_PACKAGES += \
     BluetoothExt \
-    CellBroadcastReceiver \
     libemoji \
     LatinImeDictionaryPack \
     mGerrit \
@@ -56,6 +55,7 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/etc/init.d/00start:system/etc/init.d/00start \
     vendor/aokp/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
     vendor/aokp/prebuilt/common/etc/init.d/50selinuxrelabel:system/etc/init.d/50selinuxrelabel \
+    vendor/aokp/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit \
     vendor/aokp/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
     vendor/aokp/prebuilt/common/bin/sysinit:system/bin/sysinit
 

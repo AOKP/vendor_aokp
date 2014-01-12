@@ -1,3 +1,10 @@
 #!/system/bin/sh
-log -p i -t start "    A wise man never plays leapfrog with a unicorn";
+log -p i -t start "    ______  _____   __  __   _____";
+log -p i -t start "   /\\  _  \\/\\  __`\\/\\ \\/\\ \\ /\\  _ `\\";
+log -p i -t start "   \\ \\ \\L\\ \\ \\ \\/\\ \\ \\ \\/'/'\\ \\ \\L\\ \\";
+log -p i -t start "    \\ \\  __ \\ \\ \\ \\ \\ \\ , <  \\ \\ ,__/";
+log -p i -t start "     \\ \\ \\/\\ \\ \\ \\_\\ \\ \\ \\\\\\`\\ \\ \\ \\/";
+log -p i -t start "      \\ \\_\\ \\_\\ \\_____\\ \\_\\ \\_\\\\\\ \\_\\";
+log -p i -t start "       \\/_/\\/_/\\/_____/\\/_/\\/_/ \\/_/";
+log -p i -t start "A wise man never plays leapfrog with a unicorn";
 
