@@ -42,4 +42,7 @@ add_lunch_combo aokp_t0ltetmo-userdebug
 add_lunch_combo aokp_togari-userdebug
 add_lunch_combo aokp_tsubasa-userdebug
 add_lunch_combo aokp_vs980-userdebug
+add_lunch_combo aokp_xt1053-userdebug
+add_lunch_combo aokp_xt1058-userdebug
+add_lunch_combo aokp_xt1060-userdebug
 add_lunch_combo aokp_yuga-userdebug
