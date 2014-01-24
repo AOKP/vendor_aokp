@@ -27,10 +27,8 @@ add_lunch_combo aokp_jflteusc-userdebug
 add_lunch_combo aokp_jfltevzw-userdebug
 add_lunch_combo aokp_l900-userdebug
 add_lunch_combo aokp_ls980-userdebug
-add_lunch_combo aokp_m7att-userdebug
+add_lunch_combo aokp_m7-userdebug
 add_lunch_combo aokp_m7spr-userdebug
-add_lunch_combo aokp_m7tmo-userdebug
-add_lunch_combo aokp_m7ul-userdebug
 add_lunch_combo aokp_m7vzw-userdebug
 add_lunch_combo aokp_mint-userdebug
 add_lunch_combo aokp_n1-userdebug
