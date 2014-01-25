@@ -40,6 +40,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/mint.mk \
     $(LOCAL_DIR)/odin.mk \
     $(LOCAL_DIR)/p930.mk \
+    $(LOCAL_DIR)/pico.mk \
     $(LOCAL_DIR)/pollux.mk \
     $(LOCAL_DIR)/pollux_windy.mk \
     $(LOCAL_DIR)/solana.mk \
