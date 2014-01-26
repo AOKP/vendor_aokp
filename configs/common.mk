@@ -19,7 +19,8 @@ PRODUCT_PACKAGES += \
     SwagPapers \
     Torch \
     UnicornPorn \
-    KitKatWhite
+    KitKatWhite \
+    WhisperPush
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
