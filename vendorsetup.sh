@@ -38,6 +38,7 @@ add_lunch_combo aokp_polluxwindy-userdebug
 add_lunch_combo aokp_t0lte-userdebug
 add_lunch_combo aokp_t0lteatt-userdebug
 add_lunch_combo aokp_t0ltetmo-userdebug
+add_lunch_combo aokp_tf700t-userdebug
 add_lunch_combo aokp_togari-userdebug
 add_lunch_combo aokp_tsubasa-userdebug
 add_lunch_combo aokp_vs980-userdebug
