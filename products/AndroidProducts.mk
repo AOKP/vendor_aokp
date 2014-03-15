@@ -40,6 +40,10 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/moto_msm8960dt.mk \
     $(LOCAL_DIR)/odin.mk \
     $(LOCAL_DIR)/p930.mk \
+    $(LOCAL_DIR)/p3100.mk \
+    $(LOCAL_DIR)/p3110.mk \
+    $(LOCAL_DIR)/p5100.mk \
+    $(LOCAL_DIR)/p5110.mk \
     $(LOCAL_DIR)/pollux.mk \
     $(LOCAL_DIR)/pollux_windy.mk \
     $(LOCAL_DIR)/satsuma.mk \

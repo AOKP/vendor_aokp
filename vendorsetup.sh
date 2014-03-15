@@ -37,6 +37,10 @@ add_lunch_combo aokp_moto_msm8960dt-userdebug
 add_lunch_combo aokp_n1-userdebug
 add_lunch_combo aokp_odin-userdebug
 add_lunch_combo aokp_p930-userdebug
+add_lunch_combo aokp_p3100-userdebug
+add_lunch_combo aokp_p3110-userdebug
+add_lunch_combo aokp_p5100-userdebug
+add_lunch_combo aokp_p5110-userdebug
 add_lunch_combo aokp_pollux-userdebug
 add_lunch_combo aokp_polluxwindy-userdebug
 add_lunch_combo aokp_satsuma-userdebug
