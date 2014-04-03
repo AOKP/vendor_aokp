@@ -19,12 +19,7 @@ add_lunch_combo aokp_huashan-userdebug
 add_lunch_combo aokp_honami-userdebug
 add_lunch_combo aokp_i605-userdebug
 add_lunch_combo aokp_i9300-userdebug
-add_lunch_combo aokp_jfltecri-userdebug
-add_lunch_combo aokp_jfltecsp-userdebug
-add_lunch_combo aokp_jfltespr-userdebug
-add_lunch_combo aokp_jfltetmo-userdebug
-add_lunch_combo aokp_jflteusc-userdebug
-add_lunch_combo aokp_jfltevzw-userdebug
+add_lunch_combo aokp_jflte-userdebug
 add_lunch_combo aokp_l900-userdebug
 add_lunch_combo aokp_ls980-userdebug
 add_lunch_combo aokp_m7-userdebug
