@@ -1,9 +1,6 @@
 PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/a510.mk \
-    $(LOCAL_DIR)/d2att.mk \
-    $(LOCAL_DIR)/d2tmo.mk \
-    $(LOCAL_DIR)/d2vzw.mk \
-    $(LOCAL_DIR)/d2usc.mk \
+    $(LOCAL_DIR)/d2lte.mk \
     $(LOCAL_DIR)/d800.mk \
     $(LOCAL_DIR)/d801.mk \
     $(LOCAL_DIR)/d802.mk \
