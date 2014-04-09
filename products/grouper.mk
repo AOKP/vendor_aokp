@@ -17,4 +17,4 @@ PRODUCT_MANUFACTURER := asus
 PRODUCT_BUILD_PROP_OVERRIDES := PRODUCT_NAME=nakasi BUILD_FINGERPRINT=google/nakasi/grouper:4.3/JWR66V/573038:user/release-keys PRIVATE_BUILD_DESC="nakasi-user 4.3 JWR66V 573038 release-keys" BUILD_NUMBER=573038
 
 PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/bootanimation/bootanimation_1280_800.zip:system/media/bootanimation-alt.zip
+    vendor/aokp/prebuilt/bootanimation/bootanimation_1080.zip:system/media/bootanimation.zip
