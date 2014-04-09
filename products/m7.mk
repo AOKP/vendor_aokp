@@ -9,7 +9,7 @@ BUILD_ID=KOT49H.H1 BUILD_FINGERPRINT="htc/m7_google/m7:4.4.2/KOT49H.H1/288144:us
 PRIVATE_BUILD_DESC="3.62.1700.1 CL288144 release-keys"
 
 PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/bootanimation/bootanimation_1080_1920.zip:system/media/bootanimation-alt.zip
+    vendor/aokp/prebuilt/bootanimation/bootanimation_1080.zip:system/media/bootanimation.zip
 
 PRODUCT_NAME := aokp_m7
 PRODUCT_DEVICE := m7

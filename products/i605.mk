@@ -20,4 +20,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=t0ltevzw TARGET_DEVICE=t0ltevzw BUI
 
 # boot animation
 PRODUCT_COPY_FILES += \
-vendor/aokp/prebuilt/bootanimation/bootanimation_720_1280.zip:system/media/bootanimation-alt.zip
+vendor/aokp/prebuilt/bootanimation/bootanimation_720.zip:system/media/bootanimation.zip
