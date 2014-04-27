@@ -8,6 +8,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/e980.mk \
     $(LOCAL_DIR)/evita.mk \
     $(LOCAL_DIR)/find5.mk \
+    $(LOCAL_DIR)/find7a.mk \
     $(LOCAL_DIR)/grouper.mk \
     $(LOCAL_DIR)/hercules.mk \
     $(LOCAL_DIR)/honami.mk \
