@@ -11,6 +11,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/e980.mk \
     $(LOCAL_DIR)/evita.mk \
     $(LOCAL_DIR)/find5.mk \
+    $(LOCAL_DIR)/find7.mk \
     $(LOCAL_DIR)/grouper.mk \
     $(LOCAL_DIR)/haida.mk \
     $(LOCAL_DIR)/hallon.mk \
