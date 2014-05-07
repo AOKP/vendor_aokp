@@ -29,6 +29,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/manta.mk \
     $(LOCAL_DIR)/maserati.mk \
     $(LOCAL_DIR)/mint.mk \
+    $(LOCAL_DIR)/moto_msm8960dt.mk \
     $(LOCAL_DIR)/odin.mk \
     $(LOCAL_DIR)/p930.mk \
     $(LOCAL_DIR)/pollux.mk \
@@ -46,6 +47,4 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/umtsspyder.mk \
     $(LOCAL_DIR)/vs920.mk \
     $(LOCAL_DIR)/vs980.mk \
-    $(LOCAL_DIR)/xt1053.mk \
-    $(LOCAL_DIR)/xt1060.mk \
     $(LOCAL_DIR)/yuga.mk
