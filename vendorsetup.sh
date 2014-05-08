@@ -28,6 +28,7 @@ add_lunch_combo aokp_mint-userdebug
 add_lunch_combo aokp_moto_msm8960dt-userdebug
 add_lunch_combo aokp_n1-userdebug
 add_lunch_combo aokp_odin-userdebug
+add_lunch_combo aokp_p930-userdebug
 add_lunch_combo aokp_pollux-userdebug
 add_lunch_combo aokp_polluxwindy-userdebug
 add_lunch_combo aokp_t0lte-userdebug
@@ -36,5 +37,6 @@ add_lunch_combo aokp_t0ltetmo-userdebug
 add_lunch_combo aokp_togari-userdebug
 add_lunch_combo aokp_tsubasa-userdebug
 add_lunch_combo aokp_v500-userdebug
+add_lunch_combo aokp_vs920-userdebug
 add_lunch_combo aokp_vs980-userdebug
 add_lunch_combo aokp_yuga-userdebug
