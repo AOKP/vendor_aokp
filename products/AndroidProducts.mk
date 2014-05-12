@@ -30,6 +30,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/maserati.mk \
     $(LOCAL_DIR)/mint.mk \
     $(LOCAL_DIR)/moto_msm8960dt.mk \
+    $(LOCAL_DIR)/nicki.mk \
     $(LOCAL_DIR)/odin.mk \
     $(LOCAL_DIR)/p930.mk \
     $(LOCAL_DIR)/pollux.mk \
