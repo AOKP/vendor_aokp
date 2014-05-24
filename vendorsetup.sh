@@ -30,6 +30,7 @@ add_lunch_combo aokp_ls980-userdebug
 add_lunch_combo aokp_m7-userdebug
 add_lunch_combo aokp_m7spr-userdebug
 add_lunch_combo aokp_m7vzw-userdebug
+add_lunch_combo aokp_m8-userdebug
 add_lunch_combo aokp_mango-userdebug
 add_lunch_combo aokp_mint-userdebug
 add_lunch_combo aokp_moto_msm8960dt-userdebug
