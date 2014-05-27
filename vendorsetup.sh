@@ -19,6 +19,7 @@ add_lunch_combo aokp_haida-userdebug
 add_lunch_combo aokp_hallon-userdebug
 add_lunch_combo aokp_hlte-userdebug
 add_lunch_combo aokp_huashan-userdebug
+add_lunch_combo aokp_nicki-userdebug
 add_lunch_combo aokp_honami-userdebug
 add_lunch_combo aokp_i605-userdebug
 add_lunch_combo aokp_i9300-userdebug
