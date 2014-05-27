@@ -17,6 +17,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/hercules.mk \
     $(LOCAL_DIR)/honami.mk \
     $(LOCAL_DIR)/huashan.mk \
+    $(LOCAL_DIR)/nicki.mk \
     $(LOCAL_DIR)/hlte.mk \
     $(LOCAL_DIR)/i605.mk \
     $(LOCAL_DIR)/i9100.mk \
