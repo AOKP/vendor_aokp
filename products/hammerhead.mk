@@ -12,7 +12,7 @@ $(call inherit-product, vendor/aokp/configs/gsm.mk)
 
 # Setup device specific product configuration
 PRODUCT_NAME := aokp_hammerhead
-PRODUCT_BRAND := google
+PRODUCT_BRAND := Google
 PRODUCT_DEVICE := hammerhead
 PRODUCT_MODEL := Nexus 5
 PRODUCT_MANUFACTURER := LGE
