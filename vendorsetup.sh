@@ -40,6 +40,7 @@ add_lunch_combo aokp_p930-userdebug
 add_lunch_combo aokp_pollux-userdebug
 add_lunch_combo aokp_polluxwindy-userdebug
 add_lunch_combo aokp_satsuma-userdebug
+add_lunch_combo aokp_serranoltexx-userdebug
 add_lunch_combo aokp_smultron-userdebug
 add_lunch_combo aokp_t0lte-userdebug
 add_lunch_combo aokp_t0lteatt-userdebug
