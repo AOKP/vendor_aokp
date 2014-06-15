@@ -43,6 +43,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/pollux.mk \
     $(LOCAL_DIR)/pollux_windy.mk \
     $(LOCAL_DIR)/satsuma.mk \
+    $(LOCAL_DIR)/serranoltexx.mk \
     $(LOCAL_DIR)/smultron.mk \
     $(LOCAL_DIR)/solana.mk \
     $(LOCAL_DIR)/spyder.mk \
