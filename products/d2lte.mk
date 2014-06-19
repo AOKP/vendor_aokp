@@ -10,4 +10,4 @@ PRODUCT_DEVICE := d2lte
 PRODUCT_NAME := aokp_d2lte
 
 PRODUCT_COPY_FILES +=  \
-    vendor/aokp/prebuilt/bootanimation/bootanimation_1080.zip:system/media/bootanimation.zip
+    vendor/aokp/prebuilt/bootanimation/bootanimation_720.zip:system/media/bootanimation.zip

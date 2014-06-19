@@ -20,7 +20,7 @@ PRODUCT_MANUFACTURER := Asus
 PRODUCT_BUILD_PROP_OVERRIDES += PRODUCT_NAME=nakasig BUILD_FINGERPRINT="google/nakasig/tilapia:4.4.3/KTU84L/1148727:user/release-keys" PRIVATE_BUILD_DESC="nakasig-user 4.4.3 KTU84L 1148727 release-keys"
 
 PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/bootanimation/bootanimation_1080.zip:system/media/bootanimation.zip
+    vendor/aokp/prebuilt/bootanimation/bootanimation_800.zip:system/media/bootanimation.zip
 
 PRODUCT_PACKAGES += \
     Mms
