@@ -15,6 +15,7 @@ add_lunch_combo aokp_d800-userdebug
 add_lunch_combo aokp_d801-userdebug
 add_lunch_combo aokp_d802-userdebug
 add_lunch_combo aokp_dogo-userdebug
+add_lunch_combo aokp_e980-userdebug
 add_lunch_combo aokp_find5-userdebug
 add_lunch_combo aokp_find7-userdebug
 add_lunch_combo aokp_haida-userdebug
