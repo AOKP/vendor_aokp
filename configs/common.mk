@@ -18,7 +18,7 @@ PRODUCT_PACKAGES += \
     su \
     SwagPapers \
     Torch \
-    UnicornPorn \
+    UnicornBeam \
     KitKatWhite
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
