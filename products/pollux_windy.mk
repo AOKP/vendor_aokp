@@ -5,7 +5,7 @@ $(call inherit-product-if-exists, device/sony/pollux_windy/aokp.mk)
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/pollux
 
 # Setup device specific product configuration.
-PRODUCT_NAME := aokp_polluxwindy
+PRODUCT_NAME := aokp_pollux_windy
 PRODUCT_BRAND := Sony
 PRODUCT_DEVICE := pollux_windy
 PRODUCT_MODEL := Xperia Tablet Z WiFi

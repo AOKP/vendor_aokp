@@ -42,7 +42,7 @@ add_lunch_combo aokp_n1-userdebug
 add_lunch_combo aokp_odin-userdebug
 add_lunch_combo aokp_p930-userdebug
 add_lunch_combo aokp_pollux-userdebug
-add_lunch_combo aokp_polluxwindy-userdebug
+add_lunch_combo aokp_pollux_windy-userdebug
 add_lunch_combo aokp_satsuma-userdebug
 add_lunch_combo aokp_serranoltexx-userdebug
 add_lunch_combo aokp_sirius-userdebug
