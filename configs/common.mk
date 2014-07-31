@@ -12,6 +12,7 @@ PRODUCT_PACKAGES += \
     libemoji \
     LatinImeDictionaryPack \
     mGerrit \
+    Ivy \
     Microbes \
     ROMControl \
     Stk \
