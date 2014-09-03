@@ -9,23 +9,25 @@ ifneq ($(AOKP_BUILD),)
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.developerid=aokp \
         ro.goo.rom=aokp \
-        ro.goo.version=$(shell echo $(AOKP_BUILD) | cut -d/ -f1) \
-        ro.aokp.version=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_$(shell echo $(AOKP_BUILD) | cut -d/ -f2)
+        ro.goo.version=$(shell echo $(AOKP_BUILD) | cut -d/ -f1)
+
+    AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_$(shell echo $(AOKP_BUILD) | cut -d/ -f2)
 else
     ifneq ($(AOKP_NIGHTLY),)
         # AOKP_NIGHTLY=true
-        PRODUCT_PROPERTY_OVERRIDES += \
-            ro.aokp.version=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_nightly_$(DATE)
+        AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_nightly_$(DATE)
     else
-        PRODUCT_PROPERTY_OVERRIDES += \
-            ro.aokp.version=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_unofficial_$(DATE)
+        AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_unofficial_$(DATE)
     endif
 endif
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.aokp.version=$(AOKP_VERSION)
+
 # needed for statistics
 PRODUCT_PROPERTY_OVERRIDES += \
-        ro.aokp.branch=$(AOKP_BRANCH) \
-        ro.aokp.device=$(AOKP_PRODUCT)
+    ro.aokp.branch=$(AOKP_BRANCH) \
+    ro.aokp.device=$(AOKP_PRODUCT)
 
 # Camera shutter sound property
 PRODUCT_PROPERTY_OVERRIDES += \
