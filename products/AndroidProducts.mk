@@ -28,6 +28,7 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/i9500.mk \
     $(LOCAL_DIR)/iyokan.mk \
     $(LOCAL_DIR)/jflte.mk \
+    $(LOCAL_DIR)/klte.mk \
     $(LOCAL_DIR)/l900.mk \
     $(LOCAL_DIR)/ls980.mk \
     $(LOCAL_DIR)/m7.mk \

@@ -29,6 +29,7 @@ add_lunch_combo aokp_i9300-userdebug
 add_lunch_combo aokp_i9500-userdebug
 add_lunch_combo aokp_iyokan-userdebug
 add_lunch_combo aokp_jflte-userdebug
+add_lunch_combo aokp_klte-userdebug
 add_lunch_combo aokp_l900-userdebug
 add_lunch_combo aokp_ls980-userdebug
 add_lunch_combo aokp_m7-userdebug
