@@ -102,6 +102,7 @@ on boot
 
     chown system system /sys/block/mmcblk0/queue/scheduler
     chmod 0664 /sys/block/mmcblk0/queue/scheduler
+    restorecon /sys/block/mmcblk0/queue/scheduler
 
     # allow system to modify ksm control files
     chown root system /sys/kernel/mm/ksm/pages_to_scan
