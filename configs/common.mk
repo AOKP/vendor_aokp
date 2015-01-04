@@ -1,3 +1,5 @@
+PRODUCT_BRAND ?= aokp
+
 SUPERUSER_EMBEDDED := true
 
 # Common overlay
@@ -7,6 +9,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/dictionaries
 
 PRODUCT_PACKAGES += \
+    LatinIME \
     BluetoothExt \
     CellBroadcastReceiver \
     libemoji \
@@ -17,9 +20,7 @@ PRODUCT_PACKAGES += \
     Stk \
     su \
     SwagPapers \
-    Torch \
-    UnicornBeam \
-    KitKatWhite
+    Torch
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -30,6 +31,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
+    keyguard.no_require_sim=true \
     ro.url.legal=http://www.google.com/intl/%s/mobile/android/basic/phone-legal.html \
     ro.url.legal.android_privacy=http://www.google.com/intl/%s/mobile/android/basic/privacy.html \
     ro.com.android.wifi-watchlist=GoogleGuest \
@@ -39,6 +41,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.kernel.android.checkjni=0 \
     persist.sys.root_access=3
 
+#SELinux
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.build.selinux=1
 
@@ -63,23 +66,46 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.sip.voip.xml:system/etc/permissions/android.software.sip.voip.xml
 
+#Tools
 PRODUCT_PACKAGES += \
+    libsepol \
+    openvpn \
     e2fsck \
     mke2fs \
     tune2fs \
-    libssh \
+    bash \
+    nano \
+    htop \
+    powertop \
+    lsof \
+    mount.exfat \
+    fsck.exfat \
+    mkfs.exfat \
+    mkfs.f2fs \
+    fsck.f2fs \
+    fibmap.f2fs \
+    ntfsfix \
+    ntfs-3g \
+    gdbserver \
+    micro_bench \
+    oprofiled \
+    sqlite3 \
+    strace
+
+# Openssh
+PRODUCT_PACKAGES += \
+    scp \
+    sftp \
     ssh \
     sshd \
     sshd_config \
     ssh-keygen \
-    start-ssh \
-    sftp \
-    scp \
-    mount.exfat \
-    fsck.exfat \
-    mkfs.exfat \
-    ntfsfix \
-    ntfs-3g
+    start-ssh
+
+# rsync
+PRODUCT_PACKAGES += \
+    rsync
+
 
 # Stagefright FFMPEG plugins
 PRODUCT_PACKAGES += \
