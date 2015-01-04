@@ -1,0 +1,5 @@
+add_lunch_combo aokp_mako-userdebug
+add_lunch_combo aokp_hammerhead-userdebug
+add_lunch_combo aokp_yuga-userdebug
+add_lunch_combo aokp_honami-userdebug
+add_lunch_combo aokp_sirius-userdebug
