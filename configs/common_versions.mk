@@ -2,16 +2,16 @@
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_UTC_DATE=$(shell date +"%s")
 
 DATE = $(shell vendor/aokp/tools/getdate)
-AOKP_BRANCH=kitkat
+AOKP_BRANCH=lollipop
 
-ifneq ($(AOKP_BUILD),)
+ifneq ($(AOKP_BUILDTYPE),)
     # AOKP_BUILD=<goo version int>/<build string>
     PRODUCT_PROPERTY_OVERRIDES += \
         ro.goo.developerid=aokp \
         ro.goo.rom=aokp \
-        ro.goo.version=$(shell echo $(AOKP_BUILD) | cut -d/ -f1)
+        ro.goo.version=$(shell echo $(AOKP_BUILDTYPE) | cut -d/ -f1)
 
-    AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_$(shell echo $(AOKP_BUILD) | cut -d/ -f2)
+    AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_$(shell echo $(AOKP_BUILDTYPE) | cut -d/ -f2)
 else
     ifneq ($(AOKP_NIGHTLY),)
         # AOKP_NIGHTLY=true
