@@ -131,7 +131,7 @@ PRODUCT_COPY_FILES += packages/wallpapers/LivePicker/android.software.live_wallp
 
 # common boot animation
 PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/bootanimation/bootanimation-kiernan.zip:system/media/bootanimation-alt.zip
+    vendor/aokp/prebuilt/bootanimation/bootanimation-kiernan.zip:system/media/bootanimation.zip
 
 # World APNs
 PRODUCT_COPY_FILES += \
