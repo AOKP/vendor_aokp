@@ -1,7 +1,11 @@
 add_lunch_combo aokp_mako-userdebug
 add_lunch_combo aokp_hammerhead-userdebug
+add_lunch_combo aokp_grouper-userdebug
+add_lunch_combo aokp_amami-userdebug
+add_lunch_combo aokp_find7-userdebug
+add_lunch_combo aokp_find7s-userdebug
+add_lunch_combo aokp_honami-userdebug
 add_lunch_combo aokp_jfltevzw-userdebug
 add_lunch_combo aokp_shamu-userdebug
-add_lunch_combo aokp_yuga-userdebug
-add_lunch_combo aokp_honami-userdebug
 add_lunch_combo aokp_sirius-userdebug
+add_lunch_combo aokp_yuga-userdebug
