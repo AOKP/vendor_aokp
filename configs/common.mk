@@ -16,7 +16,7 @@ PRODUCT_PACKAGES += \
     LatinImeDictionaryPack \
     mGerrit \
     Microbes \
-    ROMControl \
+    #ROMControl \
     Stk \
     su \
     SwagPapers \
