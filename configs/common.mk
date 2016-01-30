@@ -124,6 +124,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/aokp/configs/permissions/com.aokp.android.xml:system/etc/permissions/com.aokp.android.xml
 
+# Live lockscreen
+PRODUCT_COPY_FILES += \
+    vendor/aokp/config/permissions/org.cyanogenmod.livelockscreen.xml:system/etc/permissions/org.cyanogenmod.livelockscreen.xml
+
 # Theme engine
 include vendor/aokp/configs/themes_common.mk
 
