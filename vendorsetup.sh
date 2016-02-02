@@ -1,9 +1,4 @@
-add_lunch_combo aokp_angler-userdebug
-add_lunch_combo aokp_bacon-userdebug
-add_lunch_combo aokp_bullhead-userdebug
-add_lunch_combo aokp_flo-userdebug
-add_lunch_combo aokp_hammerhead-userdebug
-add_lunch_combo aokp_hammerheadcaf-userdebug
-add_lunch_combo aosp_mako-userdebug
-add_lunch_combo aokp_m8-userdebug
-add_lunch_combo aokp_oneplus2-userdebug
+for device in $(cat vendor/aokp/aokp.devices)
+do
+add_lunch_combo aokp_$device-userdebug
+done
