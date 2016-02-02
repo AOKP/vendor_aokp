@@ -256,12 +256,12 @@ ifneq ($(AOKP_BUILD),)
 
     AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_$(shell echo $(AOKP_BUILD) | cut -d/ -f2)
 else
-    ifneq ($(AOKP_NIGHTLY),)
-        # AOKP_NIGHTLY=true
-        AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_nightly_$(DATE)
-    else
-        AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_unofficial_$(DATE)
+    ifeq ($(AOKP_BUILDTYPE),)
+        # AOKP_BUILDTYPE not defined
+	AOKP_BUILDTYPE := unofficial
     endif
+
+    AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_$(AOKP_BUILDTYPE)_$(DATE)
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
