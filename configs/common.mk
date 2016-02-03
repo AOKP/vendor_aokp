@@ -124,6 +124,11 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/aokp/configs/permissions/com.aokp.android.xml:system/etc/permissions/com.aokp.android.xml
 
+# APP REMOVAL SCRIPT
+PRODUCT_COPY_FILES += \
+   vendor/aokp/prebuilt/common/addon.d/60-removal.sh:system/addon.d/60-removal.sh
+
+
 # Theme engine
 include vendor/aokp/configs/themes_common.mk
 
