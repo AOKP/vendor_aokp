@@ -149,6 +149,10 @@ PRODUCT_PACKAGES += \
     libemoji \
     Terminal
 
+# Optional packages
+PRODUCT_PACKAGES += \
+    OmniSwitch
+
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
     librsjni
