@@ -162,6 +162,7 @@ PRODUCT_PACKAGES += \
     Eleven \
     ExactCalculator \
     Launcher3 \
+    LiveLockScreenService \
     LockClock \
     Trebuchet
 
