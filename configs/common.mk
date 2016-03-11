@@ -239,7 +239,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=3
 
 # Common overlay
-PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
+DEVICE_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
 
 PRODUCT_VERSION_MAJOR = 13
 PRODUCT_VERSION_MINOR = 0
