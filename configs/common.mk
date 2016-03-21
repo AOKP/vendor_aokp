@@ -164,7 +164,8 @@ PRODUCT_PACKAGES += \
     Launcher3 \
     LiveLockScreenService \
     LockClock \
-    Trebuchet
+    Trebuchet \
+    WeatherProvider
 
 # Exchange support
 PRODUCT_PACKAGES += \
