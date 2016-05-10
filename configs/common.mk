@@ -159,6 +159,7 @@ PRODUCT_PACKAGES += \
     CMFileManager \
     CMSettingsProvider \
     CyanogenSetupWizard \
+    DataUsageProvider \
     Eleven \
     ExactCalculator \
     Launcher3 \
