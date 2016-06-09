@@ -34,4 +34,4 @@ You can also build (and see how long it took) for specific devices (eg. hammerhe
     . build/envsetup.sh
     lunch aokp_hammerhead-userdebug && time make rainbowfarts
 
-Remember to `make clean` every now and then!
+Remember to `make clean && make clobber` every now and then!
