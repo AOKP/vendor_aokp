@@ -4,6 +4,8 @@ $(call inherit-product, vendor/aokp/configs/common.mk)
 # Bring in all video files
 $(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
 
+PRODUCT_SIZE := full
+
 # Include CM audio files
 include vendor/aokp/configs/cm_audio.mk
 
