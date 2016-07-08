@@ -79,6 +79,10 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
     vendor/aokp/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
+# Backup Services whitelist
+PRODUCT_COPY_FILES += \
+    vendor/aokp/configs/permissions/backup.xml:system/etc/sysconfig/backup.xml
+
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
