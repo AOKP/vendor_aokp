@@ -145,7 +145,8 @@ PRODUCT_PACKAGES += \
     mGerrit \
     Microbes \
     ROMControl \
-    Stk
+    Stk \
+    ThemeManagerService
 
 # Optional AOKP packages
 PRODUCT_PACKAGES += \
