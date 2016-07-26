@@ -138,6 +138,7 @@ include vendor/aokp/configs/cmsdk_common.mk
 PRODUCT_PACKAGES += \
     BluetoothExt \
     CellBroadcastReceiver \
+    CMAudioService \
     Development \
     LatinIME \
     LatinImeDictionaryPack \
