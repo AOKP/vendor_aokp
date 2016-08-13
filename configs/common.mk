@@ -171,6 +171,7 @@ PRODUCT_PACKAGES += \
     LiveLockScreenService \
     LockClock \
     ThemeManagerService \
+    WeatherManagerService \
     Trebuchet \
     WeatherProvider
 
