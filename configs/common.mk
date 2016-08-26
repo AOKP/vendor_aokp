@@ -131,8 +131,10 @@ PRODUCT_COPY_FILES += \
 # Theme engine
 include vendor/aokp/configs/themes_common.mk
 
+ifneq ($(TARGET_DISABLE_CMSDK), true)
 # CMSDK
 include vendor/aokp/configs/cmsdk_common.mk
+endif
 
 # Required AOKP packages
 PRODUCT_PACKAGES += \
