@@ -293,7 +293,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.aokp.display.version=$(AOKP_DISPLAY_VERSION)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
-
+-include vendor/aokp/configs/partner_gms.mk
 -include vendor/cyngn/product.mk
 
 $(call prepend-product-if-exists, vendor/extra/product.mk)
