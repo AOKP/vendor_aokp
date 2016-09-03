@@ -162,6 +162,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX \
     CMAudioService \
+    CMParts \
     CMWallpapers \
     CMFileManager \
     CMSettingsProvider \
