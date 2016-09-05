@@ -263,7 +263,7 @@ PRODUCT_VERSION_MAINTENANCE = 0-RC0
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_UTC_DATE=$(shell date +"%s")
 
 DATE = $(shell vendor/aokp/tools/getdate)
-AOKP_BRANCH=mm
+AOKP_BRANCH=nougat
 
 ifneq ($(AOKP_BUILD),)
     # AOKP_BUILD=<goo version int>/<build string>
