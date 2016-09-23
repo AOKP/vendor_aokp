@@ -14,18 +14,7 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/dictionaries
 
 # Optional AOKP packages
 PRODUCT_PACKAGES += \
-    CMSettingsProvider \
-    Galaxy4 \
-    HoloSpiralWallpaper \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    MagicSmokeWallpapers \
-    NoiseField \
-    PhaseBeam \
-    PhotoPhase \
-    PhotoTable \
-    Screencast \
-    SoundRecorder
+    CMSettingsProvider 
 
 PRODUCT_PACKAGES += \
     VideoEditor \
