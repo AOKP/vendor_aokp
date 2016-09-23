@@ -12,21 +12,6 @@ include vendor/aokp/configs/cm_audio.mk
 # Include AOKP LatinIME dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/dictionaries
 
-# Optional AOKP packages
-PRODUCT_PACKAGES += \
-    CMSettingsProvider \
-    Galaxy4 \
-    HoloSpiralWallpaper \
-    LiveWallpapers \
-    LiveWallpapersPicker \
-    MagicSmokeWallpapers \
-    NoiseField \
-    PhaseBeam \
-    PhotoPhase \
-    PhotoTable \
-    Screencast \
-    SoundRecorder
-
 PRODUCT_PACKAGES += \
     VideoEditor \
     libvideoeditor_jni \
