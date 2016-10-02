@@ -285,6 +285,13 @@ PRODUCT_PACKAGES += \
     su
 endif
 
+#DU Utils Library
+PRODUCT_PACKAGES += \
+    org.dirtyunicorns.utils
+
+PRODUCT_BOOT_JARS += \
+    org.dirtyunicorns.utils
+
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=3
 
