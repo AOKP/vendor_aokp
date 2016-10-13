@@ -154,14 +154,14 @@ PRODUCT_PACKAGES += \
     mGerrit \
     Microbes \
     Stk
-#    ROMControl \
+#   ROMControl \
 
 # Optional AOKP packages
 PRODUCT_PACKAGES += \
     libemoji \
-    Terminal \
     LiveWallpapersPicker \
-    PhotoTable
+    PhotoTable \
+    Terminal
 
 # Include librsjni explicitly to workaround GMS issue
 PRODUCT_PACKAGES += \
@@ -171,21 +171,22 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX \
     CMAudioService \
-    CMParts \
-    CMWallpapers \
     CMFileManager \
+    CMParts \
     CMSettingsProvider \
+    CMWallpapers \
     CyanogenSetupWizard \
     Eleven \
     ExactCalculator \
     Launcher3 \
     LiveLockScreenService \
     LockClock \
-    Trebuchet \
-    WeatherManagerService \
-    WeatherProvider \
+    Screencast \
     SoundRecorder \
-    Screencast
+    Trebuchet \
+    WallpaperPicker \
+    WeatherManagerService \
+    WeatherProvider
 
 # Exchange support
 PRODUCT_PACKAGES += \
@@ -193,26 +194,26 @@ PRODUCT_PACKAGES += \
 
 # Extra tools in CM
 PRODUCT_PACKAGES += \
-    libsepol \
-    mke2fs \
-    tune2fs \
-    nano \
-    htop \
-    mkfs.ntfs \
-    fsck.ntfs \
-    mount.ntfs \
-    gdbserver \
-    micro_bench \
-    oprofiled \
-    sqlite3 \
-    strace \
-    pigz \
     7z \
-    lib7z \
     bash \
     bzip2 \
     curl \
+    fsck.ntfs \
+    gdbserver \
+    htop \
+    lib7z \
+    libsepol \
+    micro_bench \
+    mke2fs \
+    mkfs.ntfs \
+    mount.ntfs \
+    nano \
+    oprofiled \
+    pigz \
     powertop \
+    sqlite3 \
+    strace \
+    tune2fs \
     unrar \
     unzip \
     vim \
