@@ -155,8 +155,8 @@ PRODUCT_PACKAGES += \
     LatinImeDictionaryPack \
     mGerrit \
     Microbes \
+    ROMControl \
     Stk
-#   ROMControl \
 
 # Optional AOKP packages
 PRODUCT_PACKAGES += \
