@@ -285,9 +285,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
 
-PRODUCT_VERSION_MAJOR = 13
-PRODUCT_VERSION_MINOR = 0
-PRODUCT_VERSION_MAINTENANCE = 0-RC0
+PRODUCT_VERSION_MAJOR = 14
+PRODUCT_VERSION_MINOR = 1
+PRODUCT_VERSION_MAINTENANCE = 0
 
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_UTC_DATE=$(shell date +"%s")
@@ -321,6 +321,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.aokp.releasetype=$(AOKP_BUILDTYPE) \
     ro.modversion=$(AOKP_VERSION) \
     ro.aokp.display.version=$(AOKP_DISPLAY_VERSION)
+    ro.cmlegal.url=https://cyngn.com/legal/privacy-policy
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/aokp/configs/partner_gms.mk
