@@ -18,7 +18,8 @@
 #
 
 # skip api check for PDK buid
-ifeq (,$(filter true, $(WITHOUT_CHECK_API) $(TARGET_BUILD_PDK)))
+ifeq (,$(filter true, $(WITHOUT_CHECK_API) $(TARGET_BUILD_PDK) $(TARGET_DISABLE_CMSDK)))
+ifeq ($(FORCE_CHECK_API),true)
 
 .PHONY: checkapi-cm
 
@@ -89,4 +90,5 @@ update-cm-prebuilts-latest-public-api: $(FRAMEWORK_CM_PLATFORM_API_FILE) | $(ACP
 	@echo -e ${CL_GRN}"Publishing cm_current.txt as latest API release"${CL_RST}
 	$(hide) $(ACP) $(FRAMEWORK_CM_PLATFORM_API_FILE) $(current_sdk_release_text_file)
 
+endif
 endif
