@@ -292,7 +292,7 @@ PRODUCT_VERSION_MAINTENANCE = 0
 # Version information used on all builds
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_UTC_DATE=$(shell date +"%s")
 
-DATE = $(shell vendor/aokp/tools/getdate)
+AOKP_BUILD_DATE := $(shell LC_ALL=C date +%Y-%m-%d_%H%M)
 AOKP_BRANCH=nougat
 
 ifneq ($(AOKP_BUILD),)
@@ -309,7 +309,7 @@ else
 	AOKP_BUILDTYPE := unofficial
     endif
 
-    AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_$(AOKP_BUILDTYPE)_$(DATE)
+    AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_$(AOKP_BUILDTYPE)_$(AOKP_BUILD_DATE)
 endif
 
 AOKP_DISPLAY_VERSION := $(AOKP_VERSION)
