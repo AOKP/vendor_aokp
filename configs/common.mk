@@ -155,6 +155,7 @@ PRODUCT_PACKAGES += \
     LatinImeDictionaryPack \
     mGerrit \
     Microbes \
+    masquerade \
     ROMControl \
     Stk
 
