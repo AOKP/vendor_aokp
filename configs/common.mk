@@ -288,6 +288,10 @@ endif
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=3
 
+# OMS
+PRODUCT_PROPERTY_OVERRIDES := \
+    ro.substratum.verified=true
+
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
 
