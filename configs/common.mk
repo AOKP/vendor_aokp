@@ -289,7 +289,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=3
 
 # OMS
-PRODUCT_PROPERTY_OVERRIDES := \
+PRODUCT_PROPERTY_OVERRIDES += \
     ro.substratum.verified=true
 
 # Common overlay
