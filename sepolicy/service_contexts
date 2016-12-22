@@ -9,3 +9,4 @@ cmperformance                             u:object_r:cm_performance_service:s0
 cmweather                                 u:object_r:cm_weather_service:s0
 cmlivedisplay                             u:object_r:cm_livedisplay_service:s0               
 cmaudio                                   u:object_r:cm_audio_service:s0
+theme                                     u:object_r:theme_service:s0
