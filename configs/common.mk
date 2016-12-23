@@ -177,7 +177,6 @@ PRODUCT_PACKAGES += \
     DataUsageProvider \
     Eleven \
     ExactCalculator \
-    Launcher3 \
     LiveLockScreenService \
     LockClock \
     ThemeManagerService \
