@@ -18,5 +18,5 @@ PRODUCT_PACKAGES += \
     libvideoeditorplayer
 
 # Themes
-PRODUCT_PACKAGES += \
-    HexoLibre
+#PRODUCT_PACKAGES += \
+    #HexoLibre
