@@ -20,3 +20,7 @@ PRODUCT_PACKAGES += \
 # Themes
 #PRODUCT_PACKAGES += \
     #HexoLibre
+
+# Recorder
+PRODUCT_PACKAGES += \
+    Recorder
