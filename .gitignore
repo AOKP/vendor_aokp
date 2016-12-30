@@ -1,3 +1,5 @@
+.DS_Store
 bot/
 resources/
-.DS_Store
+proprietary/*
+prebuilt/archive
