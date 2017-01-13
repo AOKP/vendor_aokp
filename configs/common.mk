@@ -171,7 +171,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     AudioFX \
     CMAudioService \
-    CMFileManager \
     CMParts \
     CMSettingsProvider \
     Eleven \
