@@ -62,6 +62,13 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
     vendor/aokp/prebuilt/common/etc/backup.conf:system/etc/backup.conf
 
+ifeq ($(AB_OTA_UPDATER),true)
+PRODUCT_COPY_FILES += \
+    vendor/aokp/prebuilt/common/bin/backuptool_ab.sh:system/bin/backuptool_ab.sh \
+    vendor/aokp/prebuilt/common/bin/backuptool_ab.functions:system/bin/backuptool_ab.functions \
+    vendor/aokp/prebuilt/common/bin/backuptool_postinstall.sh:system/bin/backuptool_postinstall.sh
+endif
+
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
     vendor/aokp/configs/permissions/backup.xml:system/etc/sysconfig/backup.xml
