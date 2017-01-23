@@ -41,11 +41,10 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_BUILT_MODULE_STEM := package.apk
 LOCAL_MODULE_SUFFIX := $(COMMON_ANDROID_PACKAGE_SUFFIX)
 
-LOCAL_MAVEN_REPO := https://maven.cyanogenmod.org/artifactory/gello_prebuilds
-LOCAL_MAVEN_GROUP := org.cyanogenmod
-LOCAL_MAVEN_VERSION := 40
-LOCAL_MAVEN_ARTIFACT := gello
-LOCAL_MAVEN_PACKAGING := apk
+LOCAL_HTTP_FILE_VERSION := 40
+LOCAL_HTTP_PATH := https://github.com/LineageOS/android_packages_apps_Gello/releases/download/$(LOCAL_HTTP_FILE_VERSION)
+LOCAL_HTTP_FILENAME := gello.apk
+LOCAL_HTTP_MD5SUM := $(LOCAL_HTTP_FILENAME).md5sum
 
-include $(BUILD_MAVEN_PREBUILT)
+include $(BUILD_HTTP_PREBUILT)
 endif
