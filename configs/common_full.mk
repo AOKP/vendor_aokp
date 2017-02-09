@@ -24,3 +24,7 @@ PRODUCT_PACKAGES += \
 # Recorder
 PRODUCT_PACKAGES += \
     Recorder
+
+# SwagPapers
+PRODUCT_PACKAGES += \
+    SwagPapers
