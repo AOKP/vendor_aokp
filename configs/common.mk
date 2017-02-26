@@ -48,7 +48,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    keyguard.no_require_sim=true 
+    keyguard.no_require_sim=true
 
 #SELinux
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -167,7 +167,6 @@ PRODUCT_PACKAGES += \
     CMWallpapers \
     CMFileManager \
     CMSettingsProvider \
-    CyanogenSetupWizard \
     DataUsageProvider \
     Eleven \
     ExactCalculator \
