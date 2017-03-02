@@ -330,6 +330,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.modversion=$(AOKP_VERSION) \
     ro.aokp.display.version=$(AOKP_DISPLAY_VERSION)
 
+PRODUCT_EXTRA_RECOVERY_KEYS += \
+    vendor/aokp/build/target/product/security/aokp-releasekey
+
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/aokp/configs/partner_gms.mk
 
