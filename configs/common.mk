@@ -174,6 +174,7 @@ PRODUCT_PACKAGES += \
     CMAudioService \
     CMParts \
     CMSettingsProvider \
+    CustomTiles \
     Eleven \
     ExactCalculator \
     LiveLockScreenService \
