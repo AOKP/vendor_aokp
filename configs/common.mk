@@ -149,7 +149,6 @@ PRODUCT_PACKAGES += \
     Development \
     LatinIME \
     LatinImeDictionaryPack \
-    masquerade \
     mGerrit \
     Microbes \
     ROMControl \
