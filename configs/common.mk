@@ -276,8 +276,12 @@ PRODUCT_BOOT_JARS += \
 ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
-    procrank \
+    procrank
+# Option to exclude superuser per target
+ifneq ($(TARGET_DISABLE_SUPERUSER), true) 
+PRODUCT_PACKAGES += \
     su
+endif
 endif
 
 #DU Utils Library
