@@ -272,12 +272,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_BOOT_JARS += \
     telephony-ext
 
-# These packages are excluded from user builds
-ifneq ($(TARGET_BUILD_VARIANT),user)
-PRODUCT_PACKAGES += \
-    procmem \
-    procrank \
-    su
+# Option to exclude superuser per target
+ifneq ($(TARGET_DISABLE_SUPERUSER), true)
+    # These packages are excluded from user builds
+    ifneq ($(TARGET_BUILD_VARIANT),user)
+    PRODUCT_PACKAGES += \
+        procmem \
+        procrank \
+        su
+    endif
 endif
 
 #DU Utils Library
