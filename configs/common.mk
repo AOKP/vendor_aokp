@@ -164,6 +164,11 @@ PRODUCT_PACKAGES += \
     PhotoTable \
     Terminal
 
+# OmniRom packages
+PRODUCT_PACKAGES += \
+    OmniJaws \
+    OmniStyle
+
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
