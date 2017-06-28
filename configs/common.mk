@@ -150,9 +150,9 @@ PRODUCT_PACKAGES += \
     Terminal
 
 # OmniRom packages
-# PRODUCT_PACKAGES += \
-#     OmniJaws \
-#     OmniStyle
+PRODUCT_PACKAGES += \
+    OmniJaws \
+    OmniStyle
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
