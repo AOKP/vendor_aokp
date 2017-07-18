@@ -143,6 +143,11 @@ ifneq ($(TARGET_DISABLE_CMSDK), true)
 include vendor/aokp/configs/cmsdk_common.mk
 endif
 
+# TWRP
+ifeq ($(WITH_TWRP),true)
+include vendor/aokp/configs/twrp.mk
+endif
+
 # Required AOKP packages
 PRODUCT_PACKAGES += \
     BluetoothExt \
