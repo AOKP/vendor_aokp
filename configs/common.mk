@@ -140,15 +140,15 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/aokp/configs/permissions/com.aokp.android.xml:system/etc/permissions/com.aokp.android.xml
 
-# Include CM audio files
-include vendor/aokp/configs/cm_audio.mk
+# Include audio files
+include vendor/aokp/configs/audio.mk
 
 # Theme engine
 include vendor/aokp/configs/themes_common.mk
 
-ifneq ($(TARGET_DISABLE_CMSDK), true)
-# CMSDK
-include vendor/aokp/configs/cmsdk_common.mk
+ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
+# Lineage SDK
+include vendor/aokp/configs/lineage_sdk_common.mk
 endif
 
 # TWRP
