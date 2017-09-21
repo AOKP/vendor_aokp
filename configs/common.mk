@@ -112,9 +112,9 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 endif
 
-# AOKP-specific init file
-PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/common/etc/init.local.rc:root/init.aokp.rc \
+# Copy all Lineage-specific init rc files
+$(foreach f,$(wildcard vendor/aokp/prebuilt/common/etc/init/*.rc),\
+	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
 
 # Installer
 PRODUCT_COPY_FILES += \
