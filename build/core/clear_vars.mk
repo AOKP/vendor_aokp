@@ -1,5 +1,5 @@
 #
-#CM-specific variable clears
+#AOKP-specific variable clears
 #
 LOCAL_IGNORE_SUBDIR :=
 
