@@ -90,4 +90,3 @@ update-lineage-prebuilts-latest-public-api: $(FRAMEWORK_LINEAGE_PLATFORM_API_FIL
 	$(hide) $(ACP) $(FRAMEWORK_LINEAGE_PLATFORM_API_FILE) $(current_sdk_release_text_file)
 
 endif
-endif
