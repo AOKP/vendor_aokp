@@ -5,20 +5,26 @@ Additional AOKP functions:
 - mmp:             Builds all of the modules in the current directory and pushes them to the device.
 - mmap:            Builds all of the modules in the current directory and its dependencies, then pushes the package to the device.
 - mmmp:            Builds all of the modules in the supplied directories and pushes them to the device.
-- aokpremote: Add git remote for AOKP Gerrit Review
-- aokpgerrit: A Git wrapper that fetches/pushes patch from/to AOKP Gerrit Review
-- aokprebase: Rebase a Gerrit change and push it again
+- aokpremote:      Add git remote for AOKP Gerrit Review
+- aokpgerrit:      A Git wrapper that fetches/pushes patch from/to AOKP Gerrit Review
+- aokprebase:      Rebase a Gerrit change and push it again
 - aospremote:      Add git remote for matching AOSP repository.
 - cafremote:       Add git remote for matching CodeAurora repository.
 - mka:             Builds using SCHED_BATCH on all processors.
 - mkap:            Builds the module(s) using mka and pushes them to the device.
-- cmka:            Cleans and builds using mka.
+- cmka:            Cleans and builds using mka
+- pspush:          push commit to AOKP gerrit instance..
 - repodiff:        Diff 2 different branches or tags within the same repo
 - repolastsync:    Prints date and time of last repo sync.
 - reposync:        Parallel repo sync using ionice and SCHED_BATCH.
 - repopick:        Utility to fetch changes from Gerrit.
 - installboot:     Installs a boot.img to the connected device.
-- installrecovery: Installs a recovery.img to the connected device.
+- installrecovery: Installs a recovery.img to the connected device
+- sdkgen:          Create and add a custom sdk platform to your sdk directory from this source tree
+- pyrrit:          Helper subprogram to interact with AOKP gerrit
+- mbot:            Builds for all devices using the psuedo buildbot
+- taco:            Builds for a single device using the pseudo buildbot
+- addaokp:         Add git remote for the AOKP gerrit repository.
 EOF
 }
 
@@ -55,7 +61,7 @@ function brunch()
 {
     breakfast $*
     if [ $? -eq 0 ]; then
-        mka bacon
+        mka aokp
     else
         echo "No such item in brunch menu. Try 'breakfast'"
         return 1
@@ -258,6 +264,110 @@ function dddclient()
    fi
 }
 
+function mbot() {
+    unset LUNCH_MENU_CHOICES
+    croot
+    ./vendor/aokp/bot/deploy.sh
+}
+
+function pspush_host() {
+    echo ""
+    echo "Host aokp_gerrit"
+    echo "  Hostname gerrit.aokp.co"
+    echo "  Port 29418"
+    echo "  User $1"
+
+}
+
+function pspush_error() {
+    echo "pspush requires ~/.ssh/config setup containing the following info:"
+    pspush_host "[sshusername]"
+}
+
+function pspush_host_create() {
+    echo "Please enter sshusername registered with gerrit.aokp.co."
+    read sshusername
+    pspush_host $sshusername  >> ~/.ssh/config
+}
+
+function pspush() {
+    local project
+    project=`git config --get remote.aokp.projectname`
+    revision=`repo info . | grep "Current revision" | awk {'print $3'} | sed -r "s/\x1B\[([0-9]{1,2}(;[0-9]{1,2})?)?[m|K]//g"`
+    if [ -z "$1" ] || [ "$1" = '--help' ]; then
+        echo "pspush"
+        echo "to use:  pspush \$destination"
+        echo "where \$destination: for=review; drafts=draft; heads=push through review to github (you probably can't)."
+        echo "example: 'pspush for'"
+        echo "will execute 'git push ssh://\$sshusername@gerrit.aokp.co:29418/$project HEAD:refs/[for][drafts][heads]/$revision'"
+    else
+        check_ssh_config="`grep -A 1 'gerrit$' ~/.ssh/config`"
+        check_ssh_config_2=`echo "$check_ssh_config" | while read line; do grep gerrit.aokp.co; done`
+        if [ -n "$check_ssh_config" ]; then
+            if [ -n "$check_ssh_config_2" ]; then
+                git push aokp_gerrit:$project HEAD:refs/$1/$revision
+            fi
+        elif [ -z "$check_ssh_config_2" ]; then
+            echo "Host entry doesn't exist, create now? (pick 1 or 2)"
+            select yn in "Yes" "No"; do
+                case $yn in
+                    Yes ) pspush_host_create
+                          echo "host entry created, please run again to push"
+                         break;;
+                    No ) pspush_error; break;;
+                esac
+            done
+        else
+            pspush_error
+        fi
+    fi
+}
+
+function taco() {
+    for sauce in "$@"
+    do
+        breakfast $sauce
+        if [ $? -eq 0 ]; then
+            croot
+            ./vendor/aokp/bot/build_device.sh aokp_$sauce-userdebug $sauce
+        else
+            echo "No such item in brunch menu. Try 'breakfast'"
+        fi
+    done
+}
+
+function addaokp() {
+    git remote rm gerrit 2> /dev/null
+    if [ ! -d .git ]
+    then
+        echo "Not a git repository."
+        exit -1
+    fi
+    REPO=$(cat .git/config  | grep git://github.com/AOKP/ | awk '{ print $NF }' | sed s#git://github.com/##g)
+    if [ -z "$REPO" ]
+    then
+        REPO=$(cat .git/config  | grep https://github.com/AOKP/ | awk '{ print $NF }' | sed s#https://github.com/##g)
+        if [ -z "$REPO" ]
+        then
+          echo Unable to set up the git remote, are you in the root of the repo?
+          return 0
+        fi
+    fi
+    AOKPUSER=`git config --get review.gerrit.aokp.co.username`
+    if [ -z "$AOKPUSER" ]
+    then
+        git remote add gerrit ssh://gerrit.aokp.co:29418/$REPO
+    else
+        git remote add gerrit ssh://$AOKPUSER@gerrit.aokp.co:29418/$REPO
+    fi
+    if ( git remote -v | grep -qv gerrit ) then
+        echo "AOKP gerrit $REPO remote created"
+    else
+        echo "Error creating remote"
+        exit -1
+    fi
+}
+
 function aokpremote()
 {
     if ! git rev-parse --git-dir &> /dev/null
@@ -372,6 +482,10 @@ function installboot()
     else
         echo "The connected device does not appear to be $AOKP_BUILD, run away!"
     fi
+}
+
+function sdkgen() {
+        build/tools/customsdkgen.sh
 }
 
 function installrecovery()
@@ -672,6 +786,12 @@ EOF
                 || return 1
             ;;
     esac
+}
+
+function pyrrit
+{
+    T=$(gettop)
+    python2.7 ${T}/build/tools/pyrrit $@
 }
 
 function aokprebase() {
