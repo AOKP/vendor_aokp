@@ -191,7 +191,7 @@ PRODUCT_PACKAGES += \
     libprotobuf-cpp-full \
     librsjni
 
-# Custom CM packages
+# Custom Lineage packages
 PRODUCT_PACKAGES += \
     AudioFX \
     CMAudioService \
@@ -322,7 +322,7 @@ PRODUCT_VERSION_MAINTENANCE = 0
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_UTC_DATE=$(shell date +"%s")
 
 AOKP_BUILD_DATE := $(shell LC_ALL=C date +%Y-%m-%d_%H%M)
-AOKP_BRANCH=nougat
+AOKP_BRANCH=oreo
 
 ifneq ($(AOKP_BUILD),)
     # AOKP_BUILD=<goo version int>/<build string>
