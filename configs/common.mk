@@ -330,17 +330,14 @@ ifneq ($(AOKP_BUILD),)
         ro.goo.developerid=aokp \
         ro.goo.rom=aokp \
         ro.goo.version=$(shell echo $(AOKP_BUILD) | cut -d/ -f1)
-
-    AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_$(shell echo $(AOKP_BUILD) | cut -d/ -f2)
 else
     ifeq ($(AOKP_BUILDTYPE),)
         # AOKP_BUILDTYPE not defined
 	AOKP_BUILDTYPE := unofficial
     endif
-
-    AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_$(AOKP_BUILDTYPE)_$(AOKP_BUILD_DATE)
 endif
 
+AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_$(AOKP_BUILDTYPE)_$(AOKP_BUILD_DATE)
 AOKP_DISPLAY_VERSION := $(AOKP_VERSION)
 
 PRODUCT_PROPERTY_OVERRIDES += \

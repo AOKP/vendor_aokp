@@ -109,7 +109,7 @@ function eat()
 {
     if [ "$OUT" ] ; then
         MODVERSION=$(get_build_var AOKP_VERSION)
-        ZIPFILE=aokp-$MODVERSION.zip
+        ZIPFILE=$MODVERSION.zip
         ZIPPATH=$OUT/$ZIPFILE
         if [ ! -f $ZIPPATH ] ; then
             echo "Nothing to eat"
