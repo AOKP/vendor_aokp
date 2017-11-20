@@ -17,7 +17,7 @@
 # -----------------------------------------------------------------
 # AOKP OTA update package
 
-AOKP_TARGET_PACKAGE := $(PRODUCT_OUT)/aokp-$(AOKP_VERSION).zip
+AOKP_TARGET_PACKAGE := $(PRODUCT_OUT)/$(AOKP_VERSION).zip
 
 .PHONY: bacon
 bacon: $(INTERNAL_OTA_PACKAGE_TARGET)
