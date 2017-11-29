@@ -37,6 +37,7 @@ endif
 
 # Common dictionaries
 PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/dictionaries
+
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
@@ -92,12 +93,16 @@ PRODUCT_COPY_FILES += \
 
 # Backup Services whitelist
 PRODUCT_COPY_FILES += \
-    vendor/aokp/configs/permissions/backup.xml:system/etc/sysconfig/backup.xml \
-    vendor/aokp/configs/permissions/power-whitelist.xml:system/etc/sysconfig/power-whitelist.xml
+    vendor/aokp/configs/permissions/backup.xml:system/etc/sysconfig/backup.xml
 
 # Lineage-specific broadcast actions whitelist
 PRODUCT_COPY_FILES += \
     vendor/aokp/configs/permissions/lineage-sysconfig.xml:system/etc/sysconfig/lineage-sysconfig.xml
+
+PRODUCT_COPY_FILES += \
+    vendor/aokp/configs/permissions/org.lineageos.android.xml:system/etc/permissions/org.lineageos.android.xml \
+    vendor/aokp/configs/permissions/privapp-permissions-lineage.xml:system/etc/permissions/privapp-permissions-lineage.xml \
+    vendor/aokp/configs/permissions/com.aokp.android.xml:system/etc/permissions/com.aokp.android.xml
 
 # Signature compatibility validation
 PRODUCT_COPY_FILES += \
@@ -141,16 +146,8 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
 
-PRODUCT_COPY_FILES += \
-    vendor/aokp/configs/permissions/org.lineageos.android.xml:system/etc/permissions/org.lineageos.android.xml \
-    vendor/aokp/configs/permissions/privapp-permissions-lineage.xml:system/etc/permissions/privapp-permissions-lineage.xml \
-    vendor/aokp/configs/permissions/com.aokp.android.xml:system/etc/permissions/com.aokp.android.xml
-
 # Include audio files
 include vendor/aokp/configs/audio.mk
-
-# Theme engine
-include vendor/aokp/configs/themes_common.mk
 
 ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
 # Lineage SDK
@@ -202,7 +199,6 @@ PRODUCT_PACKAGES += \
     Jelly \
     LineageParts \
     LineageSettingsProvider \
-    LockClock \
     Trebuchet \
     WallpaperPicker \
     WeatherManagerService \
@@ -244,7 +240,7 @@ PRODUCT_PACKAGES += \
 ifneq ($(WITH_CM_CHARGER),false)
 PRODUCT_PACKAGES += \
     charger_res_images \
-    cm_charger_res_images \
+    lineage_charger_res_images \
     font_log.png \
     libhealthd.cm
 endif
@@ -292,6 +288,7 @@ ifneq ($(TARGET_BUILD_VARIANT),user)
 PRODUCT_PACKAGES += \
     procmem \
     procrank
+
 # Option to exclude superuser per target
 ifneq ($(TARGET_DISABLE_SUPERUSER), true)
 PRODUCT_PACKAGES += \
@@ -317,7 +314,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 DEVICE_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
 
 PRODUCT_VERSION_MAJOR = 15
-PRODUCT_VERSION_MINOR = 1
+PRODUCT_VERSION_MINOR = 0
 PRODUCT_VERSION_MAINTENANCE = 0
 
 # Version information used on all builds
@@ -335,7 +332,7 @@ ifneq ($(AOKP_BUILD),)
 else
     ifeq ($(AOKP_BUILDTYPE),)
         # AOKP_BUILDTYPE not defined
-	AOKP_BUILDTYPE := unofficial
+    AOKP_BUILDTYPE := unofficial
     endif
 endif
 
