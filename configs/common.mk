@@ -164,8 +164,6 @@ PRODUCT_PACKAGES += \
     BluetoothExt \
     CellBroadcastReceiver \
     Development \
-    LatinIME \
-    LatinImeDictionaryPack \
     masquerade \
     mGerrit \
     Microbes \
