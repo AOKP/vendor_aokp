@@ -198,7 +198,6 @@ PRODUCT_PACKAGES += \
     LineageSettingsProvider \
     Trebuchet \
     WallpaperPicker \
-    WeatherManagerService \
     WeatherProvider
 
 # Exchange support
