@@ -231,11 +231,14 @@ PRODUCT_PACKAGES += \
     vim \
     wget \
     zip
+    
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images
 
 # Custom off-mode charger
-ifneq ($(WITH_CM_CHARGER),false)
+ifeq ($(WITH_LINEAGE_CHARGER),true)
 PRODUCT_PACKAGES += \
-    charger_res_images \
     lineage_charger_res_images \
     font_log.png \
     libhealthd.cm
