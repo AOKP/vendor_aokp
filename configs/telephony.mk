@@ -16,6 +16,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.ringtone=Orion.ogg
 
-# Allow tethering without provisioning app
+# Tethering - allow without requiring a provisioning app
+# (for devices that check this)
 PRODUCT_PROPERTY_OVERRIDES += \
     net.tethering.noprovisioning=true
