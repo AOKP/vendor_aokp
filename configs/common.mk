@@ -179,9 +179,9 @@ PRODUCT_PACKAGES += \
     Terminal
 
 # OmniRom packages
-PRODUCT_PACKAGES += \
-    OmniJaws \
-    OmniStyle
+# PRODUCT_PACKAGES += \
+#     OmniJaws \
+#     OmniStyle
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
@@ -293,18 +293,18 @@ endif
 endif
 
 #DU Utils Library
-PRODUCT_PACKAGES += \
-    org.dirtyunicorns.utils
+#PRODUCT_PACKAGES += \
+#    org.dirtyunicorns.utils
 
-PRODUCT_BOOT_JARS += \
-    org.dirtyunicorns.utils
+#PRODUCT_BOOT_JARS += \
+#    org.dirtyunicorns.utils
 
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.sys.root_access=3
 
 # OMS
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.substratum.verified=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    ro.substratum.verified=true
 
 # Common overlay
 DEVICE_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
