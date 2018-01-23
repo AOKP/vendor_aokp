@@ -4,7 +4,6 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/configs/permissions/org.lineageos.livedisplay.xml:system/etc/permissions/org.lineageos.livedisplay.xml \
     vendor/aokp/configs/permissions/org.lineageos.performance.xml:system/etc/permissions/org.lineageos.performance.xml \
     vendor/aokp/configs/permissions/org.lineageos.profiles.xml:system/etc/permissions/org.lineageos.profiles.xml \
-    vendor/aokp/configs/permissions/org.lineageos.statusbar.xml:system/etc/permissions/org.lineageos.statusbar.xml \
     vendor/aokp/configs/permissions/org.lineageos.telephony.xml:system/etc/permissions/org.lineageos.telephony.xml \
     vendor/aokp/configs/permissions/org.lineageos.weather.xml:system/etc/permissions/org.lineageos.weather.xml
 
