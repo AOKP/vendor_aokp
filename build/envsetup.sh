@@ -20,7 +20,6 @@ Additional AOKP functions:
 - repopick:        Utility to fetch changes from Gerrit.
 - installboot:     Installs a boot.img to the connected device.
 - installrecovery: Installs a recovery.img to the connected device
-- sdkgen:          Create and add a custom sdk platform to your sdk directory from this source tree
 - pyrrit:          Helper subprogram to interact with AOKP gerrit
 - mbot:            Builds for all devices using the psuedo buildbot
 - taco:            Builds for a single device using the pseudo buildbot
@@ -485,10 +484,6 @@ function installboot()
     else
         echo "The connected device does not appear to be $AOKP_BUILD, run away!"
     fi
-}
-
-function sdkgen() {
-        build/tools/customsdkgen.sh
 }
 
 function installrecovery()
