@@ -5,22 +5,29 @@ HEIGHT="$2"
 HALF_RES="$3"
 OUT="$ANDROID_PRODUCT_OUT/obj/BOOTANIMATION"
 
+if [ -z "$WIDTH" ]; then
+    echo "Warning: bootanimation width not specified"
+    WIDTH="1080"
+fi
+
+if [ -z "$HEIGHT" ]; then
+    echo "Warning: bootanimation height not specified"
+    HEIGHT="1080"
+fi
+
 if [ "$HEIGHT" -lt "$WIDTH" ]; then
-    IMAGEWIDTH="$HEIGHT"
+    SIZE="$HEIGHT"
 else
-    IMAGEWIDTH="$WIDTH"
+    SIZE="$WIDTH"
 fi
 
-IMAGESCALEWIDTH="$IMAGEWIDTH"
-IMAGESCALEHEIGHT=$(expr $IMAGESCALEWIDTH / 3)
-
-if [ "$HALF_RES" = "true" ]; then
-    IMAGEWIDTH=$(expr $IMAGEWIDTH / 2)
+if [ "$HALF_RES" != "false" ]; then
+    IMAGESIZE=$(expr $SIZE / 2)
+else
+    IMAGESIZE="$SIZE"
 fi
 
-IMAGEHEIGHT=$(expr $IMAGEWIDTH / 3)
-
-RESOLUTION=""$IMAGEWIDTH"x"$IMAGEHEIGHT""
+RESOLUTION=""$IMAGESIZE"x"$IMAGESIZE""
 
 for part_cnt in 0
 do
@@ -30,7 +37,7 @@ tar xfp "vendor/aokp/bootanimation/bootanimation.tar" -C "$OUT/bootanimation/"
 mogrify -resize $RESOLUTION -colors 250 "$OUT/bootanimation/"*"/"*".png"
 
 # Create desc.txt
-echo "$IMAGESCALEWIDTH $IMAGESCALEHEIGHT" 60 > "$OUT/bootanimation/desc.txt"
+echo "$SIZE $SIZE" 30 > "$OUT/bootanimation/desc.txt"
 cat "vendor/aokp/bootanimation/desc.txt" >> "$OUT/bootanimation/desc.txt"
 
 # Create bootanimation.zip
