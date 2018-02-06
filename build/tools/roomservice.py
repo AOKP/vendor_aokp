@@ -126,7 +126,7 @@ def reposync(syncrepo):
 def add_to_local_manifest(path, name, remote, branch=None):
     if (remote == "los"):
         if (branch == None):
-            branch = "lineage-15.0"
+            branch = "lineage-15.1"
         if not (name.find("LineageOS/") == 0):
             name = "LineageOS/" + name
     if (remote == "aokp"):
