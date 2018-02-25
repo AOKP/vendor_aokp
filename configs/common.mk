@@ -167,6 +167,7 @@ PRODUCT_PACKAGES += \
     Jelly \
     LineageParts \
     LineageSettingsProvider \
+    SetupWizard \
     Trebuchet \
     WallpaperPicker \
     WeatherProvider
