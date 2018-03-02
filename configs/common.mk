@@ -12,32 +12,32 @@ PRODUCT_PACKAGE_OVERLAYS += vendor/aokp/overlay/dictionaries
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
 
 ifeq ($(PRODUCT_GMS_CLIENTID_BASE),)
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=android-google
 else
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.com.google.clientidbase=$(PRODUCT_GMS_CLIENTID_BASE)
 endif
 
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     keyguard.no_require_sim=true
 
 #SELinux
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.build.selinux=1
 
 # Enable Google Assistant on all devices.
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
    ro.opa.eligible_device=true
 
 # Default notification/alarm sounds
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.config.notification_sound=Argon.ogg \
     ro.config.alarm_alert=Hassium.ogg
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
 # Thank you, please drive thru!
-PRODUCT_GENERIC_PROPERTIES += persist.sys.dun.override=0
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += persist.sys.dun.override=0
 endif
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
@@ -253,16 +253,16 @@ PRODUCT_PACKAGES += \
     libffmpeg_omx \
     media_codecs_ffmpeg.xml
 
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.sf.omx-plugin=libffmpeg_omx.so \
     media.sf.extractor-plugin=libffmpeg_extractor.so
 
 # Storage manager
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.storage_manager.enabled=true
 
 # Media
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
 
 # These packages are excluded from user builds
@@ -285,11 +285,11 @@ endif
 #PRODUCT_BOOT_JARS += \
 #    org.dirtyunicorns.utils
 
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.root_access=3
 
 # OMS
-#PRODUCT_GENERIC_PROPERTIES += \
+#PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 #    ro.substratum.verified=true
 
 # Common overlay
@@ -307,7 +307,7 @@ AOKP_BRANCH=oreo
 
 ifneq ($(AOKP_BUILD),)
     # AOKP_BUILD=<goo version int>/<build string>
-    PRODUCT_GENERIC_PROPERTIES += \
+    PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
         ro.goo.developerid=aokp \
         ro.goo.rom=aokp \
         ro.goo.version=$(shell echo $(AOKP_BUILD) | cut -d/ -f1)
@@ -321,7 +321,7 @@ endif
 AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_$(AOKP_BUILDTYPE)_$(AOKP_BUILD_DATE)
 AOKP_DISPLAY_VERSION := $(AOKP_VERSION)
 
-PRODUCT_GENERIC_PROPERTIES += \
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.aokp.version=$(AOKP_VERSION) \
     ro.aokp.branch=$(AOKP_BRANCH) \
     ro.aokp.device=$(AOKP_DEVICE) \
