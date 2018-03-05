@@ -216,7 +216,7 @@ PRODUCT_PACKAGES += \
     vim \
     wget \
     zip
-    
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images
@@ -272,11 +272,11 @@ PRODUCT_PACKAGES += \
     procmem \
     procrank
 
-# Option to exclude superuser per target
-ifneq ($(TARGET_DISABLE_SUPERUSER), true)
-PRODUCT_PACKAGES += \
-    su
-endif
+    # Option to exclude superuser per target
+    ifneq ($(TARGET_DISABLE_SUPERUSER), true)
+    PRODUCT_PACKAGES += \
+        su
+    endif
 endif
 
 #DU Utils Library
@@ -315,7 +315,7 @@ ifneq ($(AOKP_BUILD),)
 else
     ifeq ($(AOKP_BUILDTYPE),)
         # AOKP_BUILDTYPE not defined
-    AOKP_BUILDTYPE := unofficial
+        AOKP_BUILDTYPE := unofficial
     endif
 endif
 

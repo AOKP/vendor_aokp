@@ -45,4 +45,3 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # LineageOS Platform Internal
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
   ro.lineage.build.version.plat.rev=$(LINEAGE_PLATFORM_REV)
-
