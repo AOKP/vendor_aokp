@@ -308,7 +308,7 @@ AOKP_BRANCH=oreo
 
 ifneq ($(AOKP_BUILD),)
     # AOKP_BUILD=<goo version int>/<build string>
-    PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    PRODUCT_GENERIC_PROPERTIES += \
         ro.goo.developerid=aokp \
         ro.goo.rom=aokp \
         ro.goo.version=$(shell echo $(AOKP_BUILD) | cut -d/ -f1)
@@ -322,7 +322,7 @@ endif
 AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_$(AOKP_BUILDTYPE)_$(AOKP_BUILD_DATE)
 AOKP_DISPLAY_VERSION := $(AOKP_VERSION)
 
-PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+PRODUCT_GENERIC_PROPERTIES += \
     ro.aokp.version=$(AOKP_VERSION) \
     ro.aokp.branch=$(AOKP_BRANCH) \
     ro.aokp.device=$(AOKP_DEVICE) \
