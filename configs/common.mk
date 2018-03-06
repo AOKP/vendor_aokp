@@ -192,6 +192,7 @@ PRODUCT_PACKAGES += \
 # Extra tools in CM
 PRODUCT_PACKAGES += \
     7z \
+    awk \
     bash \
     bzip2 \
     curl \
