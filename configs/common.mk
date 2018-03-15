@@ -230,7 +230,7 @@ PRODUCT_PACKAGES += \
     libhealthd.cm
 endif
 
-# exFAT tools 
+# exFAT tools
 PRODUCT_PACKAGES += \
     fsck.exfat \
     mkfs.exfat
@@ -280,12 +280,12 @@ PRODUCT_PACKAGES += \
     endif
 endif
 
-#DU Utils Library
-#PRODUCT_PACKAGES += \
-#    org.dirtyunicorns.utils
+# DU Utils Library
+PRODUCT_PACKAGES += \
+    org.dirtyunicorns.utils
 
-#PRODUCT_BOOT_JARS += \
-#    org.dirtyunicorns.utils
+PRODUCT_BOOT_JARS += \
+    org.dirtyunicorns.utils
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.root_access=3
