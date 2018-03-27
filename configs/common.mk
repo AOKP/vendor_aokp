@@ -170,7 +170,8 @@ PRODUCT_PACKAGES += \
     SetupWizard \
     Trebuchet \
     WallpaperPicker \
-    WeatherProvider
+    WeatherProvider \
+    LOSCoins
 
 # Exchange support
 PRODUCT_PACKAGES += \
