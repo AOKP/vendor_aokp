@@ -30,19 +30,23 @@ import subprocess
 import re
 import argparse
 import textwrap
+from functools import cmp_to_key
 from xml.etree import ElementTree
 
 try:
-    # For python3
-    import urllib.error
-    import urllib.request
+    import requests
 except ImportError:
-    # For python2
-    import imp
-    import urllib2
-    urllib = imp.new_module('urllib')
-    urllib.error = urllib2
-    urllib.request = urllib2
+    try:
+        # For python3
+        import urllib.error
+        import urllib.request
+    except ImportError:
+        # For python2
+        import imp
+        import urllib2
+        urllib = imp.new_module('urllib')
+        urllib.error = urllib2
+        urllib.request = urllib2
 
 
 # Verifies whether pathA is a subdirectory (or the same) as pathB
@@ -101,11 +105,29 @@ def fetch_query_via_ssh(remote_url, query):
 
 
 def fetch_query_via_http(remote_url, query):
-
-    """Given a query, fetch the change numbers via http"""
-    url = '{0}/changes/?q={1}&o=CURRENT_REVISION&o=ALL_REVISIONS'.format(remote_url, query)
-    data = urllib.request.urlopen(url).read().decode('utf-8')
-    reviews = json.loads(data[5:])
+    if "requests" in sys.modules:
+        auth = None
+        if os.path.isfile(os.getenv("HOME") + "/.gerritrc"):
+            f = open(os.getenv("HOME") + "/.gerritrc", "r")
+            for line in f:
+                parts = line.rstrip().split("|")
+                if parts[0] in remote_url:
+                    auth = requests.auth.HTTPBasicAuth(username=parts[1], password=parts[2])
+        statusCode = '-1'
+        if auth:
+            url = '{0}/a/changes/?q={1}&o=CURRENT_REVISION&o=ALL_REVISIONS&o=ALL_COMMITS'.format(remote_url, query)
+            data = requests.get(url, auth=auth)
+            statusCode = str(data.status_code)
+        if statusCode != '200':
+            #They didn't get good authorization or data, Let's try the old way
+            url = '{0}/changes/?q={1}&o=CURRENT_REVISION&o=ALL_REVISIONS&o=ALL_COMMITS'.format(remote_url, query)
+            data = requests.get(url)
+        reviews = json.loads(data.text[5:])
+    else:
+        """Given a query, fetch the change numbers via http"""
+        url = '{0}/changes/?q={1}&o=CURRENT_REVISION&o=ALL_REVISIONS&o=ALL_COMMITS'.format(remote_url, query)
+        data = urllib.request.urlopen(url).read().decode('utf-8')
+        reviews = json.loads(data[5:])
 
     for review in reviews:
         review['number'] = review.pop('_number')
@@ -238,12 +260,25 @@ if __name__ == '__main__':
     # get data on requested changes
     reviews = []
     change_numbers = []
+
+    def cmp_reviews(review_a, review_b):
+        current_a = review_a['current_revision']
+        parents_a = [r['commit'] for r in review_a['revisions'][current_a]['commit']['parents']]
+        current_b = review_b['current_revision']
+        parents_b = [r['commit'] for r in review_b['revisions'][current_b]['commit']['parents']]
+        if current_a in parents_b:
+            return -1
+        elif current_b in parents_a:
+            return 1
+        else:
+            return cmp(review_a['number'], review_b['number'])
+
     if args.topic:
         reviews = fetch_query(args.gerrit, 'topic:{0}'.format(args.topic))
-        change_numbers = sorted([str(r['number']) for r in reviews], key=int)
+        change_numbers = [str(r['number']) for r in sorted(reviews, key=cmp_to_key(cmp_reviews))]
     if args.query:
         reviews = fetch_query(args.gerrit, args.query)
-        change_numbers = sorted([str(r['number']) for r in reviews], key=int)
+        change_numbers = [str(r['number']) for r in sorted(reviews, key=cmp_to_key(cmp_reviews))]
     if args.change_number:
         for c in args.change_number:
             if '-' in c:
