@@ -151,7 +151,8 @@ PRODUCT_PACKAGES += \
 
 # OmniRom packages
 PRODUCT_PACKAGES += \
-    OmniJaws
+    OmniJaws \
+    OmniStyle
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
