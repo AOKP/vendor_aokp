@@ -139,7 +139,6 @@ endif
 
 # Required AOKP packages
 PRODUCT_PACKAGES += \
-    BluetoothExt \
     CellBroadcastReceiver \
     Development \
     masquerade \
