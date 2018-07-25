@@ -200,17 +200,12 @@ PRODUCT_PACKAGES += \
     bash \
     bzip2 \
     curl \
-    gdbserver \
     htop \
     lib7z \
     libsepol \
-    micro_bench \
     nano \
-    oprofiled \
     pigz \
     powertop \
-    sqlite3 \
-    strace \
     tune2fs \
     unrar \
     unzip \
@@ -262,10 +257,11 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
 
 # These packages are excluded from user builds
-ifneq ($(TARGET_BUILD_VARIANT),user)
-PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES_DEBUG += \
+    micro_bench \
     procmem \
-    procrank
+    procrank \
+    strace
 
     # Option to exclude superuser per target
     ifneq ($(TARGET_DISABLE_SUPERUSER), true)
