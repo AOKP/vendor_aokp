@@ -82,10 +82,6 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/configs/permissions/privapp-permissions-lineage.xml:system/etc/permissions/privapp-permissions-lineage.xml \
     vendor/aokp/configs/permissions/com.aokp.android.xml:system/etc/permissions/com.aokp.android.xml
 
-# Signature compatibility validation
-PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/common/bin/otasigcheck.sh:install/bin/otasigcheck.sh
-
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/etc/init.d/00start:system/etc/init.d/00start \
