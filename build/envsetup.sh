@@ -10,6 +10,7 @@ Additional AOKP functions:
 - aokprebase:      Rebase a Gerrit change and push it again
 - aospremote:      Add git remote for matching AOSP repository.
 - cafremote:       Add git remote for matching CodeAurora repository.
+- githubremote:    Add git remote for AOKP Github.
 - mka:             Builds using SCHED_BATCH on all processors.
 - mkap:            Builds the module(s) using mka and pushes them to the device.
 - cmka:            Cleans and builds using mka
@@ -436,6 +437,27 @@ function cafremote()
     fi
     git remote add caf https://source.codeaurora.org/quic/la/$PFX$PROJECT
     echo "Remote 'caf' created"
+}
+
+function githubremote()
+{
+    if ! git rev-parse --git-dir &> /dev/null
+    then
+        echo ".git directory not found. Please run this from the root directory of the Android repository you wish to set up."
+        return 1
+    fi
+    git remote rm github 2> /dev/null
+    local REMOTE=$(git config --get remote.aosp.projectname)
+
+    if [ -z "$REMOTE" ]
+    then
+        REMOTE=$(git config --get remote.caf.projectname)
+    fi
+
+    local PROJECT=$(echo $REMOTE | sed -e "s#platform/#android/#g; s#/#_#g")
+
+    git remote add github https://github.com/AOKP/$PROJECT
+    echo "Remote 'github' created"
 }
 
 function installboot()
