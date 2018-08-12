@@ -286,6 +286,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 #    ro.substratum.verified=true
 
 # Common overlay
+PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/aokp/overlay 
 DEVICE_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
 
 PRODUCT_VERSION_MAJOR = 15
