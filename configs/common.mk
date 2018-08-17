@@ -257,11 +257,10 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     media.recorder.show_manufacturer_and_model=true
 
 # These packages are excluded from user builds
-PRODUCT_PACKAGES_DEBUG += \
-    micro_bench \
+ifneq ($(TARGET_BUILD_VARIANT),user)
+PRODUCT_PACKAGES += \
     procmem \
-    procrank \
-    strace
+    procrank
 
     # Option to exclude superuser per target
     ifneq ($(TARGET_DISABLE_SUPERUSER), true)
