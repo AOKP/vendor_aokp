@@ -267,7 +267,6 @@ PRODUCT_PACKAGES_DEBUG += \
     ifneq ($(TARGET_DISABLE_SUPERUSER), true)
     PRODUCT_PACKAGES += \
         su
-    endif
 endif
 
 # DU Utils Library
