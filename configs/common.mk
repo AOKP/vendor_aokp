@@ -82,6 +82,10 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/configs/permissions/privapp-permissions-lineage.xml:system/etc/permissions/privapp-permissions-lineage.xml \
     vendor/aokp/configs/permissions/com.aokp.android.xml:system/etc/permissions/com.aokp.android.xml
 
+# Hidden API whitelist
+PRODUCT_COPY_FILES += \
+    vendor/aokp/configs/permissions/lineage-hiddenapi-package-whitelist.xml:system/etc/permissions/lineage-hiddenapi-package-whitelist.xml
+
 # init.d support
 PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/etc/init.d/00start:system/etc/init.d/00start \
