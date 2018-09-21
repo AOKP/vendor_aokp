@@ -1,3 +1,6 @@
+# Allow vendor/extra to override any property by setting it first
+$(call inherit-product-if-exists, vendor/extra/product.mk)
+
 PRODUCT_BRAND ?= aokp
 
 SUPERUSER_EMBEDDED := true
@@ -314,5 +317,3 @@ PRODUCT_EXTRA_RECOVERY_KEYS += \
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 -include vendor/aokp/configs/partner_gms.mk
-
-$(call inherit-product-if-exists, vendor/extra/product.mk)
