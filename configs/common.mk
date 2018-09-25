@@ -279,11 +279,11 @@ endif
 endif
 
 # DU Utils Library
-PRODUCT_PACKAGES += \
-    org.dirtyunicorns.utils
+# PRODUCT_PACKAGES += \
+#     org.dirtyunicorns.utils
 
-PRODUCT_BOOT_JARS += \
-    org.dirtyunicorns.utils
+# PRODUCT_BOOT_JARS += \
+#     org.dirtyunicorns.utils
 
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     persist.sys.root_access=3
@@ -296,7 +296,7 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/aokp/overlay 
 DEVICE_PACKAGE_OVERLAYS += vendor/aokp/overlay/common
 
-PRODUCT_VERSION_MAJOR = 15
+PRODUCT_VERSION_MAJOR = 16
 PRODUCT_VERSION_MINOR = 0
 PRODUCT_VERSION_MAINTENANCE = 0
 
@@ -304,7 +304,7 @@ PRODUCT_VERSION_MAINTENANCE = 0
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_VERSION_TAGS=release-keys USER=android-build BUILD_UTC_DATE=$(shell date +"%s")
 
 AOKP_BUILD_DATE := $(shell LC_ALL=C date +%Y-%m-%d_%H%M)
-AOKP_BRANCH=oreo
+AOKP_BRANCH=pie
 
 ifneq ($(AOKP_BUILD),)
     # AOKP_BUILD=<goo version int>/<build string>
