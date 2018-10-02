@@ -176,6 +176,7 @@ PRODUCT_PACKAGES += \
     Jelly \
     LineageParts \
     LineageSettingsProvider \
+    LockClock \
     SetupWizard \
     Trebuchet \
     WallpaperPicker \
