@@ -106,5 +106,18 @@
         <permission name="android.permission.REBOOT"/>
         <permission name="android.permission.RECOVERY"/>
     </privapp-permissions>
+    
+    <privapp-permissions package="com.aokp.romcontrol">
+        <permission name="android.permission.CHANGE_CONFIGURATION"/>
+        <permission name="android.permission.CHANGE_COMPONENT_ENABLED_STATE"/>
+        <permission name="android.permission.CONTROL_INCALL_EXPERIENCE"/>
+        <permission name="android.permission.GET_APP_OPS_STATS"/>
+        <permission name="android.permission.READ_FRAME_BUFFER"/>
+        <permission name="android.permission.SET_ANIMATION_SCALE"/>
+        <permission name="android.permission.SHUTDOWN"/>
+        <permission name="android.permission.UPDATE_APP_OPS_STATS"/>
+        <permission name="android.permission.WRITE_SECURE_SETTINGS"/>
+        <permission name="android.permission.CONTROL_INCALL_EXPERIENCE"/>
+    </privapp-permissions>
 
 </permissions>
