@@ -449,7 +449,7 @@ if __name__ == '__main__':
                 sys.exit(result)
         # Perform the cherry-pick
         if not args.pull:
-            cmd = ['git cherry-pick FETCH_HEAD']
+            cmd = ['git cherry-pick --ff FETCH_HEAD']
             if args.quiet:
                 cmd_out = open(os.devnull, 'wb')
             else:
