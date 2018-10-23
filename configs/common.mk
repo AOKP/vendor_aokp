@@ -61,9 +61,7 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/bin/backuptool.sh:install/bin/backuptool.sh \
     vendor/aokp/prebuilt/common/bin/backuptool.functions:install/bin/backuptool.functions \
     vendor/aokp/prebuilt/common/bin/50-aokp.sh:system/addon.d/50-aokp.sh \
-    vendor/aokp/prebuilt/common/bin/blacklist:system/addon.d/blacklist \
-    vendor/aokp/prebuilt/common/bin/99-backup.sh:system/addon.d/99-backup.sh \
-    vendor/aokp/prebuilt/common/etc/backup.conf:system/etc/backup.conf
+    vendor/aokp/prebuilt/common/bin/blacklist:system/addon.d/blacklist
 
 ifeq ($(AB_OTA_UPDATER),true)
 PRODUCT_COPY_FILES += \
@@ -80,24 +78,13 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/aokp/configs/permissions/lineage-sysconfig.xml:system/etc/sysconfig/lineage-sysconfig.xml
 
-PRODUCT_COPY_FILES += \
-    vendor/aokp/configs/permissions/org.lineageos.android.xml:system/etc/permissions/org.lineageos.android.xml \
-    vendor/aokp/configs/permissions/privapp-permissions-lineage.xml:system/etc/permissions/privapp-permissions-lineage.xml \
-    vendor/aokp/configs/permissions/com.aokp.android.xml:system/etc/permissions/com.aokp.android.xml
-
-# Hidden API whitelist
-PRODUCT_COPY_FILES += \
-    vendor/aokp/configs/permissions/lineage-hiddenapi-package-whitelist.xml:system/etc/permissions/lineage-hiddenapi-package-whitelist.xml
-
 # init.d support
 PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/common/etc/init.d/00start:system/etc/init.d/00start \
-    vendor/aokp/prebuilt/common/etc/init.d/01sysctl:system/etc/init.d/01sysctl \
-    vendor/aokp/prebuilt/common/etc/sysctl.conf:system/etc/sysctl.conf \
+    vendor/aokp/prebuilt/common/etc/init.d/00banner:system/etc/init.d/00banner \
     vendor/aokp/prebuilt/common/bin/sysinit:system/bin/sysinit
 
-# userinit support
 ifneq ($(TARGET_BUILD_VARIANT),user)
+# userinit support
 PRODUCT_COPY_FILES += \
     vendor/aokp/prebuilt/common/etc/init.d/90userinit:system/etc/init.d/90userinit
 endif
@@ -105,15 +92,6 @@ endif
 # Copy all Lineage-specific init rc files
 $(foreach f,$(wildcard vendor/aokp/prebuilt/common/etc/init/*.rc),\
 	$(eval PRODUCT_COPY_FILES += $(f):system/etc/init/$(notdir $f)))
-
-# Installer
-PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/common/bin/persist.sh:install/bin/persist.sh \
-    vendor/aokp/prebuilt/common/etc/persist.conf:system/etc/persist.conf
-
-PRODUCT_COPY_FILES += \
-    vendor/aokp/prebuilt/common/lib/libmicrobes_jni.so:system/lib/libmicrobes_jni.so \
-    vendor/aokp/prebuilt/common/etc/resolv.conf:system/etc/resolv.conf
 
 # Copy over added mimetype supported in libcore.net.MimeUtils
 PRODUCT_COPY_FILES += \
@@ -127,7 +105,17 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     frameworks/base/data/keyboards/Vendor_045e_Product_028e.kl:system/usr/keylayout/Vendor_045e_Product_0719.kl
 
-# Include audio files
+# This is AOKP!
+PRODUCT_COPY_FILES += \
+    vendor/aokp/configs/permissions/org.lineageos.android.xml:system/etc/permissions/org.lineageos.android.xml \
+    vendor/aokp/configs/permissions/privapp-permissions-lineage.xml:system/etc/permissions/privapp-permissions-lineage.xml \
+    vendor/aokp/configs/permissions/com.aokp.android.xml:system/etc/permissions/com.aokp.android.xml
+
+# Hidden API whitelist
+PRODUCT_COPY_FILES += \
+    vendor/aokp/configs/permissions/lineage-hiddenapi-package-whitelist.xml:system/etc/permissions/lineage-hiddenapi-package-whitelist.xml
+
+# Include AOKP audio files
 include vendor/aokp/configs/audio.mk
 
 ifneq ($(TARGET_DISABLE_LINEAGE_SDK), true)
@@ -144,12 +132,9 @@ endif
 PRODUCT_PACKAGES += \
     CellBroadcastReceiver \
     Development \
-    masquerade \
     mGerrit \
-    Microbes \
     ROMControl \
-    Stk \
-    ThemeInterfacer
+    Stk 
 
 # Optional AOKP packages
 PRODUCT_PACKAGES += \
@@ -159,9 +144,9 @@ PRODUCT_PACKAGES += \
     Terminal
 
 # OmniRom packages
-PRODUCT_PACKAGES += \
-    OmniJaws \
-    OmniStyle
+#PRODUCT_PACKAGES += \
+#    OmniJaws \
+#    OmniStyle
 
 # Include explicitly to work around GMS issues
 PRODUCT_PACKAGES += \
@@ -176,8 +161,9 @@ PRODUCT_PACKAGES += \
     Jelly \
     LineageParts \
     LineageSettingsProvider \
+    LineageSetupWizard \
     LockClock \
-    SetupWizard \
+    Profiles \
     Trebuchet \
     WallpaperPicker \
     WeatherProvider
@@ -201,7 +187,7 @@ PRODUCT_PACKAGES += \
     LineageRedAccent \
     LineageYellowAccent
 
-# Extra tools in CM
+# Extra tools in Lineage
 PRODUCT_PACKAGES += \
     7z \
     awk \
@@ -230,7 +216,7 @@ ifeq ($(WITH_LINEAGE_CHARGER),true)
 PRODUCT_PACKAGES += \
     lineage_charger_res_images \
     font_log.png \
-    libhealthd.cm
+    libhealthd.lineage
 endif
 
 # Filesystems tools
@@ -271,7 +257,7 @@ PRODUCT_PACKAGES_DEBUG += \
     procrank \
     strace
 
-    # Conditionally build in su
+# Conditionally build in su
 ifneq ($(TARGET_BUILD_VARIANT),user)
 ifeq ($(WITH_SU),true)
 PRODUCT_PACKAGES += \
@@ -307,17 +293,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += BUILD_VERSION_TAGS=release-keys USER=android-bui
 AOKP_BUILD_DATE := $(shell LC_ALL=C date +%Y-%m-%d_%H%M)
 AOKP_BRANCH=pie
 
-ifneq ($(AOKP_BUILD),)
-    # AOKP_BUILD=<goo version int>/<build string>
-    PRODUCT_GENERIC_PROPERTIES += \
-        ro.goo.developerid=aokp \
-        ro.goo.rom=aokp \
-        ro.goo.version=$(shell echo $(AOKP_BUILD) | cut -d/ -f1)
-else
-    ifeq ($(AOKP_BUILDTYPE),)
-        # AOKP_BUILDTYPE not defined
-        AOKP_BUILDTYPE := unofficial
-    endif
+ifndef AOKP_BUILDTYPE
+    AOKP_BUILDTYPE := unofficial
 endif
 
 AOKP_VERSION=$(TARGET_PRODUCT)_$(AOKP_BRANCH)_$(AOKP_BUILDTYPE)_$(AOKP_BUILD_DATE)
