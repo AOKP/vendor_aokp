@@ -168,7 +168,7 @@ PRODUCT_PACKAGES += \
     LineageSetupWizard \
     LockClock \
     Profiles \
-    Trebuchet \
+    TrebuchetQuickStep \
     WallpaperPicker \
     WeatherProvider
 
