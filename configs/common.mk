@@ -144,7 +144,8 @@ PRODUCT_PACKAGES += \
     Terminal
 
 # OmniRom packages
-#PRODUCT_PACKAGES += \
+PRODUCT_PACKAGES += \
+    OmniSwitch
 #    OmniJaws \
 #    OmniStyle
 
