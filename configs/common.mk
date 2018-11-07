@@ -145,8 +145,8 @@ PRODUCT_PACKAGES += \
 
 # OmniRom packages
 PRODUCT_PACKAGES += \
-    OmniSwitch
-#    OmniJaws \
+    OmniSwitch \
+    OmniJaws
 #    OmniStyle
 
 # Include explicitly to work around GMS issues
