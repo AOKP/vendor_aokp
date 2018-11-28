@@ -137,7 +137,8 @@ PRODUCT_PACKAGES += \
     Development \
     mGerrit \
     ROMControl \
-    Stk 
+    Stk \
+    SwagPapers
 
 # Optional AOKP packages
 PRODUCT_PACKAGES += \
