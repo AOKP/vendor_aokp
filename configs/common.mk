@@ -149,7 +149,6 @@ PRODUCT_PACKAGES += \
 
 # Optional AOKP packages
 PRODUCT_PACKAGES += \
-    libemoji \
     LiveWallpapersPicker \
     PhotoTable \
     Terminal
@@ -158,11 +157,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OmniJaws \
     OmniStyle
-
-# Include explicitly to work around GMS issues
-PRODUCT_PACKAGES += \
-    libprotobuf-cpp-full \
-    librsjni
 
 # Custom Lineage packages
 PRODUCT_PACKAGES += \
