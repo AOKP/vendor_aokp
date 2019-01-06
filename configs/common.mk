@@ -118,6 +118,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/aokp/configs/permissions/lineage-hiddenapi-package-whitelist.xml:system/etc/permissions/lineage-hiddenapi-package-whitelist.xml
 
+# Power whitelist
+PRODUCT_COPY_FILES += \
+    vendor/aokp/configs/permissions/lineage-power-whitelist.xml:system/etc/sysconfig/lineage-power-whitelist.xml
+
 # Include AOKP audio files
 include vendor/aokp/configs/audio.mk
 
