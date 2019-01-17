@@ -24,41 +24,41 @@ VENDOR=*** FILL IN VENDOR ****
 
 # Load extract_utils and do some sanity checks
 MY_DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
+if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-AOKP_ROOT="$MY_DIR"/../../..
+AOKP_ROOT="${MY_DIR}/../../.."
 
-HELPER="$AOKP_ROOT"/vendor/aokp/build/tools/extract_utils.sh
-if [ ! -f "$HELPER" ]; then
-    echo "Unable to find helper script at $HELPER"
+HELPER="${AOKP_ROOT}/vendor/aokp/build/tools/extract_utils.sh"
+if [ ! -f "${HELPER}" ]; then
+    echo "Unable to find helper script at ${HELPER}"
     exit 1
 fi
-. "$HELPER"
+source "${HELPER}"
 
 # Default to sanitizing the vendor folder before extraction
 CLEAN_VENDOR=true
 
 while [ "$1" != "" ]; do
-    case $1 in
+    case "$1" in
         -n | --no-cleanup )     CLEAN_VENDOR=false
                                 ;;
         -s | --section )        shift
-                                SECTION=$1
+                                SECTION="$1"
                                 CLEAN_VENDOR=false
                                 ;;
-        * )                     SRC=$1
+        * )                     SRC="$1"
                                 ;;
     esac
     shift
 done
 
-if [ -z "$SRC" ]; then
+if [ -z "${SRC}" ]; then
     SRC=adb
 fi
 
 # Initialize the helper
-setup_vendor "$DEVICE" "$VENDOR" "$AOKP_ROOT" false "$CLEAN_VENDOR"
+setup_vendor "${DEVICE}" "${VENDOR}" "${AOKP_ROOT}" false "${CLEAN_VENDOR}"
 
-extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
+extract "${MY_DIR}/proprietary-files.txt" "${SRC}" "${SECTION}"
 
-"$MY_DIR"/setup-makefiles.sh
+"${MY_DIR}/setup-makefiles.sh"
