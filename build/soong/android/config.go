@@ -1,7 +1,7 @@
 package android
 
-// Global config used by Aokp soong additions
-var AokpConfig = struct {
+// Global config used by Lineage soong additions
+var LineageConfig = struct {
 	// List of packages that are permitted
 	// for java source overlays.
 	JavaSourceOverlayModuleWhitelist []string
