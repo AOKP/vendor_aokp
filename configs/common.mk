@@ -159,6 +159,7 @@ PRODUCT_PACKAGES += \
 # Custom Lineage packages
 PRODUCT_PACKAGES += \
     AudioFX \
+    Backgrounds \
     Eleven \
     ExactCalculator \
     Jelly \
@@ -168,7 +169,6 @@ PRODUCT_PACKAGES += \
     LockClock \
     Profiles \
     TrebuchetQuickStep \
-    WallpaperPicker \
     WeatherProvider
 
 # Exchange support
