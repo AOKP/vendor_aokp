@@ -1,6 +1,9 @@
 # Inherit common AOKP stuff
 $(call inherit-product, vendor/aokp/config/common_full.mk)
 
+# Inherit Lineage atv device tree
+$(call inherit-product, device/lineage/atv/lineage_atv.mk)
+
 PRODUCT_PACKAGES += \
     AppDrawer \
     LineageCustomizer
