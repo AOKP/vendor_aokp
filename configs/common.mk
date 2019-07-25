@@ -112,6 +112,10 @@ PRODUCT_COPY_FILES += \
     vendor/aokp/configs/permissions/privapp-permissions-cm-legacy.xml:system/etc/permissions/privapp-permissions-cm-legcay.xml \
     vendor/aokp/configs/permissions/com.aokp.android.xml:system/etc/permissions/com.aokp.android.xml
 
+# Enforce privapp-permissions whitelist
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.control_privapp_permissions=enforce
+
 # Hidden API whitelist
 PRODUCT_COPY_FILES += \
     vendor/aokp/configs/permissions/lineage-hiddenapi-package-whitelist.xml:system/etc/permissions/lineage-hiddenapi-package-whitelist.xml
