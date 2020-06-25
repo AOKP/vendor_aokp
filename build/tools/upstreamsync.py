@@ -241,8 +241,11 @@ def git_branch_delete(path, name):
 def git_branch_create(path, name):
     git_exec(path, ['checkout', '-b', name])
 
-def git_cherry_pick(path, hash):
-    git_exec(path, ['cherry-pick', hash])
+def git_cherry_pick(path, hash, merge):
+    if merge:
+        git_exec(path, ['cherry-pick', '-m', '1', '--allow-empty', hash])
+    else:
+        git_exec(path, ['cherry-pick', hash])
 
 def git_cherry_pick_abort(path):
     git_exec(path, ['cherry-pick', '--abort'])
@@ -262,13 +265,15 @@ def git_fetch(path, remote, branch):
 def git_commit_fetch(path, commit):
     # Use %p in format to get parent hashes.
     # If there are multiple parents, it is a merge.
-    lines = git_exec(path, ['log', '-n', '1', '--pretty=format:%H%n%s%n%b', commit])
+    lines = git_exec(path, ['log', '-n', '1', '--pretty=format:%H%n%P%n%s%n%b', commit])
     if len(lines) < 3:
         raise RuntimeError("git log parse failed")
     commit = dict()
     commit['hash'] = lines[0]
-    commit['title'] = lines[1]
-    commit['body'] = lines[2:]
+    commit['parents'] = lines[1].split()
+    commit['merge'] = (len(commit['parents']) > 1)
+    commit['title'] = lines[2]
+    commit['body'] = lines[3:]
     for line in commit['body']:
         fields = line.split()
         if len(fields) == 2 and fields[0] == 'Change-Id:':
@@ -378,8 +383,9 @@ def harvest_commits(project):
 
     all_on_gerrit = True
 
-    idx = 0
-    while idx < nr_to_pick:
+    idx = nr_to_pick
+    while idx > 0:
+        idx -= 1
         commit = u_log[idx]
         print "%s: Pick commit-id %s" % (path, commit['id'])
 
@@ -394,14 +400,11 @@ def harvest_commits(project):
 
         if not all_on_gerrit:
             try:
-                # XXX: Handle merge commits (eg. use: "-m 1 --allow-empty"???)
-                git_cherry_pick(path, commit['hash'])
+                git_cherry_pick(path, commit['hash'], commit['merge'])
             except RuntimeError:
                 git_cherry_pick_abort(path)
                 print "%s: Failed to pick %s" % (path, commit['id'])
                 return
-
-        idx += 1
 
     if not cfg['nodo'] and not all_on_gerrit:
         print "*** push to gerrit ***"
